@@ -3,6 +3,7 @@
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<link rel="stylesheet" media="all" type="text/css" href="../sudokuJS.css">
+		<link rel="stylesheet" media="all" type="text/css" href="../tutorial.css">
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 		<style>
 			* {
@@ -37,12 +38,35 @@
 
 		<title>SudokuJS - demo with board generation</title>
 
-
+		<script defer src="../tutorial.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script type="text/javascript" src="../sudokuJS.js"></script>
 	</head>
 
 	<body>
+
+		<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
+		<div class="modal" id = "modal">
+			<div class ="modal-header">
+				<div class="title">Sudoku Tutorial</div>
+				<button data-close-button class="close-button">&times;</button>
+			</div>
+			<div class = "modal-body">
+				This will help you understand how to play the popular game Sudoku!
+				Sudoku is a game played on a grid of 9x9 spaces.
+				<div class = "modal-ul">
+					<ul>
+						<li>Each row, column, and square has to have the numbers 1 through 9.</li>
+						<li>None of the numbers can repeat</li>
+					</ul>
+				</div>
+				To start solving click on a square and input the number that you think is correct.
+				If the number is wrong the square will light up red, and blue if correct.
+			</div>
+		</div>
+		<div id="overlay"></div>
+
+
 		<audio controls>
 		<source src="https://www.mboxdrive.com/SF.mp3" type="audio/mpeg">
 	</audio>
