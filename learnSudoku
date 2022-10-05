@@ -1,0 +1,7 @@
+Sudoku Algorithm 
+1.	Sudoku is a combinational number placement game with a 9 x 9 cell. And the goal is to fill in the remaining numbers in the rows. 
+2.	We must use a method called backtracking.
+3.	Create a recursive function that takes a grid – row and column index. 
+4.	https://www.geeksforgeeks.org/sudoku-backtracking-7/ - Something like this. 
+5.	For the board we can use a 2d array of integers. 
+6.	We iterate on the grid and then we assign a value on a empty cel.. 
