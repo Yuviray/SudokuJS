@@ -45,6 +45,7 @@
 
 	<body>
 
+		<!-- This is the whole tutorial button in html -->
 		<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 		<div class="modal" id = "modal">
 			<div class ="modal-header">
@@ -70,7 +71,9 @@
 		<audio controls>
 		<source src="loop-130-bpm.mp3"  type="audio/mp3">
 	</audio>
-	<div class="wrap">
+
+	<div id="parent">
+	<div id="wide" class="wrap">
 		<h1>SudokuJS Demo<span>With Board Generation</span></h1>
 
 		<!--show candidates toggle-->
@@ -92,6 +95,39 @@
 		<br>
 		<!--clear board btn-->
 		Clear: <button type="button" class="js-clear-board-btn">Board</button>
+	</div>
+
+	<div id="narrow">
+		<h1 class="h1">Leaderboard</h1>
+
+    	<div id="container">
+
+      	<div class="row">
+        	<div class="name">Name :</div><div class="score">Time :</div>
+      	</div>
+
+      	<div class="row">
+        	<div class="name">Player1</div><div class="score">0.00.00s</div>
+      	</div>
+
+      	<div class="row">
+        	<div class="name">Player2</div><div class="score">0.00.00s</div>
+      	</div>
+
+      	<div class="row">
+        	<div class="name">Player3</div><div class="score">0.00.00s</div>
+      	</div>
+
+      	<div class="row">
+        	<div class="name">Player4</div><div class="score">0.00.00s</div>
+      	</div>
+
+      	<div class="row">
+        	<div class="name">Player5</div><div class="score">0.00.00s</div>
+      	</div>
+
+    	</div>
+	</div>
 	</div>
 
 	<script>
