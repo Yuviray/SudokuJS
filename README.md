@@ -87,7 +87,32 @@ Provide various use cases and code examples here.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Sprint 1 Ended 10/05/2022
+
+-Yuvanesh Rajamani: 
+    Researching html,css, javascript
+    Adding music to homepage
+    creating and designing theme 1
+    adding user login/signup functionality
+-Waleed Naveed:
+-Nico Maldonado:
+-Alberto Veloso:
+-Miguel Vertiz:
+
+Sprint 2 in Progress
+
+-Yuvanesh Rajamani: 
+    adding php functionality to the main site
+    implementing user data to sql
+    adding 16x16 game mode
+
+-Waleed Naveed:
+-Nico Maldonado:
+-Alberto Veloso:
+-Miguel Vertiz:
+
+
+
 
 
 ## Room for Improvement
