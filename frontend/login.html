@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>User Login</h1>
+        <form onsubmit="return false;">
+
+            <div class="form-group">
+                <label for="">User Name</label>
+                <input type="text" name="userName">
+            </div>
+
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" name="pwd">
+            </div>
+
+            <div class="form-group">
+                <!-- <label for=""></label> -->
+                <input type="hidden" name="crud_req" value="login">
+            </div>
+            <div class="form-group">
+
+                <button type="submit" name="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="login.js" defer></script>
+</body>
+
+</html>

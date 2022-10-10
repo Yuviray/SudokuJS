@@ -1,0 +1,52 @@
+
+body{
+    background-image: url("/htmlImages/vd1xg9zh2sg21.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+h1{
+    color:black;
+    font-family: Alkalami;
+    border-top-style: dotted;
+
+}
+p{
+    background-color: gray;
+    color: white;
+    font-family: "consolas", sans-serif;
+    border-style: outset;
+    border-width: medium;
+    border-color: gold;
+    border-radius: 5px;
+    padding: 5px;
+    background: linear-gradient(to top,skyblue, aquamarine);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+#p1{
+    color:red;
+    font-style: italic;
+
+}
+#p2{
+    color:blue;
+    font-weight: bold;
+}
+#p3{
+    color:green;
+    text-decoration: aqua;
+    font-size: 18px;
+
+}
+
+.odd{
+    color:red;
+}
+.even{
+    color:blue;
+}

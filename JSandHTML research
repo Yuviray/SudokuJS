@@ -1,0 +1,119 @@
+How to create a button in Javascript
+
+There are several steps to creating a button in Javascript. Here's a guide to creating a clickable "read more" button:
+
+1. Use a createElement command
+
+Call the "document.createElement("button")" command. This helps set up the necessary foundations for your executable button. Assign the variable to a "btn" name. This helps you know which of your lines of code you've assigned to the button execution. Here is an example of this first line of code:
+
+let btn = document.createElement("button");
+
+2. Assign a string
+
+Once you assign your variable name and call your "createElement" command, you can assign a string to the code. This helps tell the code what your HTML functions are when a user interacts with the button itself. You can use the "Read more" string for your button. Your second line of code might resemble the following:
+btn.innerHTML = "Read More";
+
+3. Append the button to the tag
+
+After you assign the string and build the basic commands for the button, you can close your line of code by adding "document.body.appendChild(btn);" at the very end of the code. Your code might look something like this once you're done:
+let btn = document.createElement("button");
+
+btn.innerHTML = "Read More";
+
+document.body.appendChild(btn);
+
+4. Assign the onclick property
+
+If you want your button to perform an action once a user clicks it, you can assign the "onclick" property to your button code to execute some other code in the event of a click or tap. This code defines the function of the "onclick" property and tells the code what to do. Here's an example of what your line of code might look like if you're adding a "subscribe" functionality to your code:
+let btn = document.createElement("button");
+btn.innerHTML = "Subscribe";
+btn.onclick = function () {
+alert("Button is clicked");
+};
+document.body.appendChild(btn);
+
+5. Check functionality
+
+Once you complete your code and assign the necessary strings, elements and commands to your button, it's ready to use. You can test your button by using the site editor or publishing it. Click your button and ensure it executes the correct commands or navigates to the right pages. If there are any errors, check your code for common mistakes like a missed bracket. You might also have a mismatch in commands, where the button tells the code to execute a command that is incomplete, doesn't exist or has its own errors.
+
+
+
+HTML
+
+
+How to add background music to your web page
+
+
+To add background music on a web page, use <embed>…</embed> element. Also, use the autoplay attribute. This will run music in the background whenever the page loads.
+Set the width and height in a way the player hides on the web page. The loop attribute is added to specify whether the audio will start over again. Add the music file to the server and mention the link in src attribute.
+
+
+
+
+Example:
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML background music</title>
+   </head>
+   <body>
+      <p>The music is running in the background.</p>
+      <p>(Song: Kalimba which is provided as a Sample Music in Windows)</p>
+      <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">
+   </body>
+</html>
+
+
+<audio>: The Embed Audio element
+
+
+Basic Usage 
+
+The following example shows simple usage of the <audio> element to play an OGG file. It will autoplay due to the autoplay attribute—if the page has permission to do so—and also includes fallback content.
+
+<!-- Simple audio playback -->
+
+<audio src="AudioTest.ogg" autoplay>
+  <a href="AudioTest.ogg">Download OGG audio</a>.
+</audio>
+
+
+<audio> element with <source> element
+
+This example specifies which audio track to embed using the src attribute on a nested <source> element rather than directly on the <audio> element. It is always useful to include the file's MIME type inside the type attribute, as the browser is able to instantly tell if it can play that file, and not waste time on it if not.
+
+<audio controls>
+  <source src="foo.wav" type="audio/wav" />
+  <a href="foo.wav">Download WAV audio</a>.
+</audio>
+
+<audio> with multiple <source> elements
+
+This example includes multiple <source> elements. The browser tries to load the first source element (Opus) if it is able to play it; if not it falls back to the second (Vorbis) and finally back to MP3:
+
+<audio controls>
+  <source src="foo.opus" type="audio/ogg; codecs=opus" />
+  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="foo.mp3" type="audio/mpeg" />
+</audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
