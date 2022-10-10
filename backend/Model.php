@@ -1,6 +1,6 @@
 <?php
 // this header needs to set according to where your frontend is running
-header("Access-Control-Allow-Origin: http://127.0.0.1:5501");
+header("Access-Control-Allow-Origin: http://127.0.0.1:5500");
 
 header("Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE");
 header('Access-Control-Allow-Credentials: true');
@@ -52,6 +52,7 @@ function login($conn)
             setcookie('user', $key);
             http_response_code(200);
             echo 'welcome ' . $username;
+         
         } else {
             http_response_code(401);
             echo "Invalid User name or password";

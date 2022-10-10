@@ -21,7 +21,7 @@ login.addEventListener('click', () => {
             console.log(document.cookie)
             alert(data)
             if (status == 200)
-                location.href = "/frontend/index.html"
+                location.href = "/frontend/SudokuPlus.html"
         })
         .catch(err => {
 
