@@ -100,7 +100,9 @@ Provide various use cases and code examples here.
     * researched JAVASCRIPT
 - Alberto Veloso:
     * Added music to the background
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/490aafb91e32954e1f5247232f00c62b8574d5e4
     * Added some research about HTML and Javascript
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/1e26bc7871180d53e58b1494aae997de8697c576
 - Miguel Vertiz:
 
 ### Sprint 2 in Progress
