@@ -89,25 +89,35 @@ Provide various use cases and code examples here.
 ### Sprint 1 Ended 10/05/2022
 
 - Yuvanesh Rajamani: 
-    -  Researching html,css, javascript
-    - Adding music to homepage
-    - creating and designing theme 1
-    - adding user login/signup functionality
+    * creating and designing theme 1
+    * Researching html,css, javascript
+    * Adding music to homepage
+    * adding user login/signup functionality
 - Waleed Naveed:
 - Nico Maldonado:
+    * added tutorial window for new player
+    * added leaderboard for players
+    * researched JAVASCRIPT
 - Alberto Veloso:
+    * Added music to the background
+    * Added some research about HTML and Javascript
 - Miguel Vertiz:
 
 ### Sprint 2 in Progress
 
 - Yuvanesh Rajamani: 
-  - adding php functionality to the main site
-  - implementing user data to sql
-  -  adding 16x16 game mode
-
+    * adding php functionality to the main site
+    * implementing user data to sql
+    * adding 16x16 game mode
 - Waleed Naveed:
 - Nico Maldonado:
+    * Attach users scores with the leaderboard
+    * Make a live tutorial for the tutorial window
+    * Add a timer so that user can make high score
 - Alberto Veloso:
+    * make the music player invisible and make music autoplay in background (to be discussed)
+    * add an additional theme to the game
+    * make the theme change according to game difficulty
 - Miguel Vertiz:
 
 
@@ -116,8 +126,8 @@ Provide various use cases and code examples here.
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Nico Maldonado: 
+    * I would like to improve on communication with my teammates so that I can implement functions easier.
 
 To do:
 - Feature to be added 1
