@@ -95,7 +95,7 @@ Provide various use cases and code examples here.
     * adding user login/signup functionality https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/08b4f51fcb59eb3b0f42b826073983767361f790
 - Waleed Naveed:
     *added styling to frontend. - 
-    *researched sudoku algorithm
+    *researched sudoku algorithm https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06e8682dee18a240d3040e0286122877434eebcb
 - Nico Maldonado:
     * added tutorial window for new player
     * added leaderboard for players
