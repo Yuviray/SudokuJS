@@ -95,6 +95,9 @@ Provide various use cases and code examples here.
     * adding user login/signup functionality
 - Waleed Naveed:
 - Nico Maldonado:
+    * added tutorial window for new player
+    * added leaderboard for players
+    * researched JAVASCRIPT
 - Alberto Veloso:
 - Miguel Vertiz:
 
@@ -104,9 +107,11 @@ Provide various use cases and code examples here.
     * adding php functionality to the main site
     * implementing user data to sql
     * adding 16x16 game mode
-
 - Waleed Naveed:
 - Nico Maldonado:
+    * Attach users scores with the leaderboard
+    * Make a live tutorial for the tutorial window
+    * Add a timer so that user can make high score
 - Alberto Veloso:
 - Miguel Vertiz:
 
@@ -118,6 +123,8 @@ Include areas you believe need improvement / could be improved. Also add TODOs f
 Room for improvement:
 - Improvement to be done 1
 - Improvement to be done 2
+- Nico Maldonado: 
+    * I would like to improve on communication with my teammates so that I can implement functions easier.
 
 To do:
 - Feature to be added 1
