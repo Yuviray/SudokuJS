@@ -89,10 +89,10 @@ Provide various use cases and code examples here.
 ### Sprint 1 Ended 10/05/2022
 
 - Yuvanesh Rajamani: 
-    * creating and designing theme 1
-    * Researching html,css, javascript
-    * Adding music to homepage
-    * adding user login/signup functionality
+    * creating and designing theme 1 https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/8712767a1a22e4c25c91b7dc9422081ef12f202a
+    * Researching html,css, javascript https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/b750908e73596f31fcbec234b35b1041870852cd
+    * Adding music to homepage https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/31fc6ad5b7db49293f639499764f66eea4e703c5
+    * adding user login/signup functionality https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/08b4f51fcb59eb3b0f42b826073983767361f790
 - Waleed Naveed:
 - Nico Maldonado:
     * added tutorial window for new player
