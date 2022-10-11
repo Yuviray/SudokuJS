@@ -99,6 +99,8 @@ Provide various use cases and code examples here.
     * added leaderboard for players
     * researched JAVASCRIPT
 - Alberto Veloso:
+    * Added music to the background
+    * Added some research about HTML and Javascript
 - Miguel Vertiz:
 
 ### Sprint 2 in Progress
@@ -113,6 +115,9 @@ Provide various use cases and code examples here.
     * Make a live tutorial for the tutorial window
     * Add a timer so that user can make high score
 - Alberto Veloso:
+    * make the music player invisible and make music autoplay in background (to be discussed)
+    * add an additional theme to the game
+    * make the theme change according to game difficulty
 - Miguel Vertiz:
 
 
