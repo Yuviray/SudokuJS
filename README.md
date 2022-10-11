@@ -123,7 +123,7 @@ Include areas you believe need improvement / could be improved. Also add TODOs f
 Room for improvement:
 - Improvement to be done 1
 - Improvement to be done 2
-- Nico Maldonado: 
+Nico Maldonado: 
     * I would like to improve on communication with my teammates so that I can implement functions easier.
 
 To do:
