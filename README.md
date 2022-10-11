@@ -63,6 +63,13 @@ Related story:
 
 I, Alberto Veloso, as a game enjoyer would like to be able to play a different kind of sudoku so that I can experience something new.
 
+-  Simplistic UI
+
+We want users to focus on the game and not have trouble learning on how to use our program.
+
+Related story:
+
+I, Miguel,As a person who plays video games, I would like to make sure everyone has the opportunity to easily try out a game to its full extent in order to see if they truly enjoy it or not. 
 
 
 
@@ -106,6 +113,10 @@ Provide various use cases and code examples here.
     * Added some research about HTML and Javascript
     https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/1e26bc7871180d53e58b1494aae997de8697c576
 - Miguel Vertiz:
+    * Created and designed theme 1
+    * Reasearched and changed setup of HTML for themes to
+        use custom fonts easily for future themes
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/04c45d23bf9840c08f0af94b467044b0f427a84d
 
 ### Sprint 2 in Progress
 
@@ -123,7 +134,8 @@ Provide various use cases and code examples here.
     * add an additional theme to the game
     * make the theme change according to game difficulty
 - Miguel Vertiz:
-
+    * implement a manual theme change button
+    * allow for prefered themes to be saved for each user
 
 
 ## Room for Improvement
