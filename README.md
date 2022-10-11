@@ -89,10 +89,10 @@ Provide various use cases and code examples here.
 ### Sprint 1 Ended 10/05/2022
 
 - Yuvanesh Rajamani: 
-   -  Researching html,css, javascript
-   - Adding music to homepage
-   - creating and designing theme 1
-   - adding user login/signup functionality
+    -  Researching html,css, javascript
+    - Adding music to homepage
+    - creating and designing theme 1
+    - adding user login/signup functionality
 - Waleed Naveed:
 - Nico Maldonado:
 - Alberto Veloso:
