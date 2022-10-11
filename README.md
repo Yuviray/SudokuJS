@@ -101,8 +101,8 @@ Provide various use cases and code examples here.
     * Adding music to homepage https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/31fc6ad5b7db49293f639499764f66eea4e703c5
     * adding user login/signup functionality https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/08b4f51fcb59eb3b0f42b826073983767361f790
 - Waleed Naveed:
-    *added styling to frontend. - https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/b83b772e7390ddd8d4a924dd1cb7ce17f28c08f3
-    *researched sudoku algorithm https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06e8682dee18a240d3040e0286122877434eebcb
+    * added styling to fronted - https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/b83b772e7390ddd8d4a924dd1cb7ce17f28c08f3
+    * research sudoku album-  https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06e8682dee18a240d3040e0286122877434eebcb
 - Nico Maldonado:
     * added tutorial window for new player
     * added leaderboard for players
