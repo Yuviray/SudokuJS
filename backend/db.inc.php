@@ -1,12 +1,16 @@
 <?php
-$server = "localhost:3306";
-$user = "root";
-$pwd = "Rajamani10";
-$db = "rest_login";
+declare(strict_types=1);
 
-$conn = new mysqli($server, $user, $pwd, $db);
+require_once('vendor/autoload.php');
 
- header("Content-Type: text/html");
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
+$conn = new mysqli($_ENV['DB_SERVER'], $_ENV['DB_USER'], $_ENV['DB_PWD'],$_ENV['DB_DB']);
+
+header("Content-Type: text/html");
 if($conn->connect_errno)
 {http_response_code(400);
     echo  $conn->connect_error; exit();}
+
+
