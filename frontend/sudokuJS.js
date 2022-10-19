@@ -412,7 +412,7 @@
 
 
 		/* removeCandidatesFromCells
-		 * ---returns list of cells where any candidats where removed
+		 * ---returns list of cells where any candidates where removed
 		-----------------------------------------------------------------*/
 		var removeCandidatesFromCells = function(cells, candidates){
 			//log("removeCandidatesFromCells");
@@ -1778,7 +1778,7 @@
 		};
 
 		var setBoard = function(newBoard){
-      clearBoard(); // if any pre-existing
+      		clearBoard(); // if any pre-existing
 			board = newBoard;
 			initBoard();
 			visualEliminationOfCandidates();
@@ -1814,3 +1814,5 @@
 
 
 })(window, jQuery);
+
+
