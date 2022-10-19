@@ -1,0 +1,37 @@
+1.	Install mySql: https://www.mysql.com/
+2.	Install php: https://kinsta.com/blog/install-php/  (this can take a while to download)
+3.	Set up sql data base
+    a.	Go to schemas
+        i.	Go to Query
+        1.	Enter these commands( or do it manually) remove commands after entering 
+            a.	create database rest_login;
+            b.	use rest_login;
+            create table users (
+            id int unsigned not null autoincremnt primary key,
+            first_name varchar(255) not null,
+            last_name varchar(255) not null,
+            user_name varchar(255) not null unique,
+            email varchar(255) not null unique,
+            pwd varchar(255) not null,
+            r_pwd varchar(255) not null,
+            );
+            c.   Click the yellow bolt next disc icon.
+            d.   check table to see if vars were created
+4.	create .env file in backend folder
+5.	install composer with these commands
+6.	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+7.	php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+8.	php composer-setup.php
+9.	php -r "unlink('composer-setup.php');"
+10.	sudo mv composer.phar /usr/local/bin/composer
+11.	composer require vlucas/phpdotenv(ingnore this for now)
+12.	Add these to the .env file changing the variables to ones that match your database
+    a.DB_SERVER=localhost:3306
+    b.DB_USER=root
+    c.DB_PWD=Rajamani10
+    d.DB_DB=rest_login
+13. Create .gitignore and add .env in it
+
+ 
+
+
