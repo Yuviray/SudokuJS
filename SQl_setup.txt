@@ -1,4 +1,5 @@
-1.	Install mySql: https://www.mysql.com/
+1.	Install mySql: https://dev.mysql.com/downloads/mysql/
+2.  Istal mysqlWorkbench https://www.mysql.com/products/workbench/
 2.	Install php: https://kinsta.com/blog/install-php/  (this can take a while to download)
 3.	Set up sql data base
     a.	Go to schemas
