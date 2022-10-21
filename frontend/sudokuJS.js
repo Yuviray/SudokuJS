@@ -10,7 +10,6 @@
 		toggle edit candidates
 		undo/redo
 	*/
-
 	/**
 	* Define a jQuery plugin
 	*/
@@ -139,8 +138,7 @@
 				r.push(k);
 			return r;
 		};
-
-
+		
 
 		/* calcBoardDifficulty
 		 * --------------
@@ -462,6 +460,7 @@
 		/* clearBoard
 		-----------------------------------------------------------------*/
 		var clearBoard = function(){
+			stop();
 			resetBoardVariables();
 
 			//reset board variable
@@ -615,7 +614,6 @@
 			}
 			return t;
 		};
-
 
 
 		/* openSingles
@@ -1686,6 +1684,8 @@
 				clearBoard();
       if (contains(DIFFICULTIES, diff)) {
         difficulty = diff
+		stop();//Calls stop to stop any timer in progress
+		score();//Calls timer to start the game
       } else if (boardSize >= 9) {
         difficulty = DIFFICULTY_MEDIUM
       } else {
@@ -1722,13 +1722,52 @@
 			}
 		};
 
+		// NEW TIMER FEATURE TO GET HIGH SCORES //////////////////////////////////////////////////////////////////////////////
+		var minutesLabel = document.getElementById("minutes");
+    	var secondsLabel = document.getElementById("seconds");
+       	var totalSeconds = 0;
+		var check = null;
+
+		function score()
+		{	
+        	check = setInterval(function() { setTime();}, 1000);
+			function setTime()
+			{
+            	++totalSeconds;
+            	secondsLabel.innerHTML = pad(totalSeconds%60);
+            	minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        	}
+
+        	function pad(val)
+        	{
+            	var valString = val + "";
+            	if(valString.length < 2)
+            	{
+                	return "0" + valString;
+            	}
+            	else
+            	{
+                	return valString;
+            	}
+        	}
+		}
+
+		function stop() {
+            clearInterval(check);
+            check = null;
+			secondsLabel.innerHTML = "00";
+        	minutesLabel.innerHTML = "00";
+			totalSeconds = 0;
+        }
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 		/*
 		 * init/API/events
 		 *-----------*/
 		if(!opts.board) {
 			initBoard(opts);
-			generateBoard(opts);
+			//generateBoard(opts);
 			renderBoard();
 		} else {
 			board = opts.board;
@@ -1752,8 +1791,6 @@
 			var id = parseInt($this.attr("id").replace("input-",""));
 			keyboardNumberInput($this, id);
 		});
-
-
 
 		/**
 		* PUBLIC methods
@@ -1812,7 +1849,4 @@
 		};
 	};
 
-
 })(window, jQuery);
-
-
