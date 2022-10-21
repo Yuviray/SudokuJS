@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<link rel="stylesheet" media="all" type="text/css" href="Theme1.css">
+		<link rel="stylesheet" media="all" type="text/css" href="sudokuJS.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 		<style>
@@ -35,7 +35,7 @@
 
 		</style>
 
-		<title>SudokuJS - demo with board generation</title>
+		<title>Sudoku Plus Demo</title>
 
 		<script defer src="tutorial.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -73,7 +73,7 @@
 
 	<div id="parent">
 	<div id="wide" class="wrap">
-		<h1>SudokuJS Demo<span>With Board Generation</span></h1>
+		<h1>SudokuPlus<span>Demo</span></h1>
 
 		
 		<!--genrate board btns-->
@@ -82,6 +82,14 @@
 		<button type="button" class="js-generate-board-btn--medium">Medium</button>
 		<button type="button" class="js-generate-board-btn--hard">Hard</button>
 		<button type="button" class="js-generate-board-btn--very-hard">Very Hard</button>
+
+		<!-- timer for board -->
+		<div class="timer">
+		<label id="minutes">00</label>
+		<label id="colon">:</label>
+		<label id="seconds" >00</label>
+		<label>s</label>
+		</div>
 
 
 		<!--the only required html-->
@@ -108,23 +116,23 @@
       	</div>
 
       	<div class="row">
-        	<div class="name">Player1</div><div class="score">0.00.00s</div>
+        	<div class="name">Player1</div><div class="score">00.00s</div>
       	</div>
 
       	<div class="row">
-        	<div class="name">Player2</div><div class="score">0.00.00s</div>
+        	<div class="name">Player2</div><div class="score">00.00s</div>
       	</div>
 
       	<div class="row">
-        	<div class="name">Player3</div><div class="score">0.00.00s</div>
+        	<div class="name">Player3</div><div class="score">00.00s</div>
       	</div>
 
       	<div class="row">
-        	<div class="name">Player4</div><div class="score">0.00.00s</div>
+        	<div class="name">Player4</div><div class="score">00.00s</div>
       	</div>
 
       	<div class="row">
-        	<div class="name">Player5</div><div class="score">0.00.00s</div>
+        	<div class="name">Player5</div><div class="score">00.00s</div>
       	</div>
 
     	</div>

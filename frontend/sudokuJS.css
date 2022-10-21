@@ -176,4 +176,7 @@
   color: bronze;
 }
 
-
+.timer{
+	display: inline-block;
+	padding-left: 180px;
+}
