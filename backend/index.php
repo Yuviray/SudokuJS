@@ -1,8 +1,19 @@
+<?php
+require 'config.php';
+if(!empty($_SESSION["id"])){
+  $id = $_SESSION["id"];
+  $result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+  $row = mysqli_fetch_assoc($result);
+}
+else{
+  header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<link rel="stylesheet" media="all" type="text/css" href="sudokuJS.css">
+		<link rel="stylesheet" media="all" type="text/css" href="theme1.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 		<style>
@@ -70,6 +81,9 @@
 		<audio controls>
 		<source src="loop-130-bpm.mp3"  type="audio/mp3">
 	</audio>
+  
+  <h1>Welcome <?php echo $row["user_name"]; ?></h1>
+    <a href="logout.php">Logout</a>
 
 	<div id="parent">
 	<div id="wide" class="wrap">
@@ -106,37 +120,13 @@
 		</h2><button type="button" class="js-clear-board-btn">Clear Board</button>
 	</div>
 
-	<div id="narrow">
-		<h1 class="h1">Leaderboard</h1>
-
-    	<div id="container">
-
-      	<div class="row">
-        	<div class="name">Name :</div><div class="score">Time :</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player1</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player2</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player3</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player4</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player5</div><div class="score">00.00s</div>
-      	</div>
-
-    	</div>
-	</div>
+	<h2>leader board</h2>
+        <table>
+            <tr>
+                <td>Ranking</td>
+                <td>UserName</td>
+                <td>Score</td>
+            </tr>
 	</div>
 
 
