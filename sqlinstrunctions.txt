@@ -1,0 +1,22 @@
+1. download xampp from the website 
+2. enable apache and mySQL .
+3. Click start on btoh apache and mySQL.
+4. Configure within the http://localhost/phpmyadmin/
+5. create new and sudokuplus to the configuration.
+6.  a.	create database rest_login;
+            b.	use rest_login;
+            create table users (
+            id int unsigned not null autoincremnt primary key,
+            first_name varchar(255) not null,
+            last_name varchar(255) not null,
+            user_name varchar(255) not null unique,
+            email varchar(255) not null unique,
+            pwd varchar(255) not null,
+            r_pwd varchar(255) not null,
+            score int(10) not null,
+            );
+            c.   Click the yellow bolt next disc icon.
+            d.   check table to see if vars were created
+
+7. Move sudoku file in the folder with the htdocs folder, in the XAMPP app folder
+8. To run go to web browser , and search localhost/"foldername".

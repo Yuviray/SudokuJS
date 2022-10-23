@@ -33,6 +33,10 @@
     d.DB_DB=rest_login
 13. Create .gitignore and add .env in it
 
+
+
+
+
  
 
 
