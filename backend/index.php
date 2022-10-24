@@ -170,13 +170,14 @@ else{
   			/* Fetch Rows from the SQL query */
   			if (mysqli_num_rows($result)) {
 	  			while ($row = mysqli_fetch_array($result)) {// code the prints ranking will need inline css
-		  			echo "<td>{$ranking}</td> 
+		  			echo "<tr><td>{$ranking}</td> 
 		  			<td>{$row['user_name']}</td>
-		  			<td>{$row['score']}</td>";
+		  			<td>{$row['score']}</td></tr>";
 		  			$ranking++;
 	  			}
   			}
   			?>
+		</table>
 	</div>
 
 	

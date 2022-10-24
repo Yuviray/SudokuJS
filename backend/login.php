@@ -29,18 +29,32 @@ if(isset($_POST["submit"])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" media="all" type="text/css" href="loginCSS.css">
     <title>Login</title>
   </head>
   <body>
-    <h2>Login</h2>
-    <form class="" action="" method="post" autocomplete="off">
-      <label for="usernameemail">Username or Email : </label>
-      <input type="text" name="usernameemail" id = "usernameemail" required value=""> <br>
-      <label for="password">Password : </label>
-      <input type="password" name="password" id = "password" required value=""> <br>
-      <button type="submit" name="submit">Login</button>
-    </form>
-    <br>
+  <div class="center">
+        <h1>Sudoku Plus Login</h1>
+        <form class="" action="" method="post" autocomplete="off">
+
+            <div class="text-field">
+            <input type="text" name="usernameemail" id = "usernameemail" required value="">
+                <span></span>
+                <label for="usernameemail">Username or Email : </label>
+            </div>
+
+            <div class="text-field">
+                <input type="password" name="password" id = "password" required value=""> 
+                <span></span>
+                <label for="password">Password : </label>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="submit">Login</button>
+            </div>
+
+        </form>
+    </div>
     <a href="register.php">Registration</a>
   </body>
 </html>
+

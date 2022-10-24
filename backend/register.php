@@ -37,26 +37,52 @@ if(isset($_POST["submit"])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" media="all" type="text/css" href="loginCSS.css">
     <title>Registration</title>
   </head>
   <body>
-    <h2>Registration</h2>
-    <form class="" action="" method="post" autocomplete="off">
-      <label for="first_name">First Name : </label>
-      <input type="text" name="first_name" id = "first_name" required value=""> <br>
-      <label for="last_name">Last Name : </label>
-      <input type="text" name="last_name" id = "last_name" required value=""> <br>
-      <label for="user_name">Username : </label>
-      <input type="text" name="user_name" id = "user_name" required value=""> <br>
-      <label for="email">Email : </label>
-      <input type="email" name="email" id = "email" required value=""> <br>
-      <label for="pwd">Password : </label>
-      <input type="password" name="pwd" id = "pwd" required value=""> <br>
-      <label for="r_pwd">Confirm Password : </label>
-      <input type="password" name="r_pwd" id = "r_pwd" required value=""> <br>
-      <button type="submit" name="submit">Register</button>
-    </form>
+  <div class="center">
+        <h1>User Registration</h1>
+         <form class="" action="" method="post" autocomplete="off">
+            <div class="text-field">
+                <input type="text" name="first_name" id = "first_name" required value=""> 
+                <span></span>
+                <label for="first_name">First Name : </label>
+            </div>
+            <div class="text-field">
+                <input type="text" name="last_name" id = "last_name" required value=""> 
+                <span></span>
+                <label for="last_name">Last Name : </label>
+            </div>
+            <div class="text-field">
+                <input type="text" name="user_name" id = "user_name" required value=""> 
+                <span></span>
+                <label for="user_name">Username : </label>
+            </div>
+            <div class="text-field">
+                <input type="email" name="email" id = "email" required value=""> 
+                <span></span>
+                <label for="email">Email : </label>
+            </div>
+            <div class="text-field">
+                <input type="password" name="pwd" id = "pwd" required value=""> 
+                <span></span>
+                <label for="pwd">Password : </label>
+            </div>
+            <div class="text-field">
+                <input type="password" name="r_pwd" id = "r_pwd" required value=""> 
+                <span></span>
+                <label for="r_pwd">Confirm Password : </label>
+            </div>
+            <div class="form-group">
+
+                <button type="submit" name="submit">Register</button>
+            </div>
+        </form>
+    </div>
     <br>
     <a href="login.php">Login</a>
   </body>
   </html>
+
+  
