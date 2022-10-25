@@ -134,11 +134,20 @@ audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}
     background-color: #f8f8f8;
 }
 
+h2{
+    font-family: "Poppins", sans-serif;
+    color: #010813;
+    font-size: 1.15rem;
+    opacity: 0.8;
+    display: inline;
+}
+
 .js-generate-board-btn--easy,.js-generate-board-btn--medium
 ,.js-generate-board-btn--hard,.js-generate-board-btn--very-hard
 ,.js-analyze-board-btn,.js-clear-board-btn,.js-solve-all-btn
 ,.js-solve-step-btn{
-    background-color: transparent; /* Green */
+    
+    background-color: rgba(255, 255, 255, 0.5);
     border: black 2px solid;
     color: black;
     padding: 3px;
@@ -148,4 +157,14 @@ audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}
     font-size: 14px;
 }
 
-     
+.js-generate-board-btn--easy:hover,.js-generate-board-btn--medium:hover
+,.js-generate-board-btn--hard:hover,.js-generate-board-btn--very-hard:hover
+,.js-analyze-board-btn:hover,.js-clear-board-btn:hover,.js-solve-all-btn:hover
+,.js-solve-step-btn:hover{
+    box-shadow:
+    -7px -7px 20px 0px rgba(0, 0, 0, 0.11),
+    -4px -4px 5px 0px rgba(0, 0, 0, 0.11),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.11),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.11);
+    transform: scale(1.1);
+}

@@ -37,7 +37,7 @@ if(isset($_POST["submit"])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" type="text/css" href="loginCSS.css">
+    <link rel="stylesheet" media="all" type="text/css" href="Frontedstyle.css">
     <title>Registration</title>
   </head>
   <body>
@@ -80,9 +80,17 @@ if(isset($_POST["submit"])){
             </div>
         </form>
     </div>
-    <br>
-    <a href="login.php">Login</a>
-  </body>
-  </html>
 
-  
+    <br> &nbsp;&nbsp;
+
+    <button onclick="backToLoginScript()">Back to Login</button>
+
+    <script> 
+			function backToLoginScript()
+			{ 
+				window.location.assign('login.php');
+			}
+		</script>
+
+  </body>
+</html>

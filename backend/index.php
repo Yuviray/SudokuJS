@@ -13,9 +13,12 @@ else{
 	<head>
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<link rel="stylesheet" media="all" type="text/css" href="theme1.css">
-		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
+
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
+		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
+		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
+
 		<style>
 			* {
 				margin:0; padding:0;
@@ -44,6 +47,46 @@ else{
 				}
 			}
 
+			/* ---- Menu Bar Styling ---- */
+			.menuBar 
+			{
+				background-color: #111;
+				overflow: hidden;
+				position: relative;
+				top: 0;
+				width: 100%;
+				border: 10px;
+				min-width: 100%;
+				user-select: none;
+			}
+  
+			.menuBar menuButton
+			{
+				float: right;
+				color: #FFF;
+				text-align: center;
+				padding: 10px 16px;
+				text-decoration: none;
+				font-size: 17px;
+			}
+
+			.menuBar menuButton.left
+			{
+				float: left;
+				color: #FFF;
+				text-align: center;
+				padding: 10px 16px;
+				text-decoration: none;
+				font-size: 17px;
+			}
+
+			.menuBar menuButton:hover,.menuBar menuButton.left:hover
+			{
+				background-color: #ddd;
+				color: black;
+			}
+
+			/* ---- Menu Bar Styling ---- */
 		</style>
 
 		<title>Sudoku Plus Demo</title>
@@ -54,6 +97,18 @@ else{
 	</head>
 
 	<body>
+
+		<div class="menuBar">
+			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
+			<menuButton onclick="logoutScript()">Logout</menuButton>
+		</div>
+
+		<script> 
+			function logoutScript()
+			{ 
+				window.location.assign('logout.php');
+			}
+		</script>
 
 		<!-- This is the whole tutorial button in html -->
 		<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
@@ -75,15 +130,37 @@ else{
 				If the number is wrong the square will light up red, and blue if correct.
 			</div>
 		</div>
+
+		<!-- Change Themes and Buttons -->
+		<script class="activate-A-Theme">
+			function useTheme1()
+			{
+			document.getElementById('theme2').disabled  = true;
+			document.getElementById('theme1').disabled = false;
+			}
+
+			function useTheme2()
+			{
+			document.getElementById('theme2').disabled  = false;
+			document.getElementById('theme1').disabled = true;
+			}
+		</script>
+		
+		<br><br>
+
+		<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
+		<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
+		<!-- Change Themes and Buttons -->
+
 		<div id="overlay"></div>
 
-
-		<audio controls>
+	<!--
+	<audio controls>
 		<source src="loop-130-bpm.mp3"  type="audio/mp3">
 	</audio>
-  
-  <h1>Welcome <?php echo $row["user_name"]; ?></h1>
-    <a href="logout.php">Logout</a>
+	-->
+		
+  	<!-- <h1>Welcome < ?php echo $row["user_name"];?></h1> -->
 
 	<div id="parent">
 	<div id="wide" class="wrap">
@@ -139,7 +216,7 @@ else{
   
   	?>
 	<!--form submission for testing input need to change for game-->
-  	<h2>update score</h2>
+  	<h2>Update Score: </h2>
       <form class="" action="" method="post" autocomplete="off">
         <label for="newScore">new score : </label>
         <input type="text" name="newScore" id = "newScore" required value=""> <br>
@@ -147,7 +224,7 @@ else{
       </form>
       <br>
 	<!--leader board need styling-->
-	<h2>leader board</h2>
+	<h2>Leaderboard: </h2>
         <table>
             <tr>
                 <td>Ranking</td>

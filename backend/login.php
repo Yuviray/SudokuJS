@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" type="text/css" href="loginCSS.css">
+    <link rel="stylesheet" media="all" type="text/css" href="Frontedstyle.css">
     <title>Login</title>
   </head>
   <body>
@@ -51,10 +51,10 @@ if(isset($_POST["submit"])){
             <div class="form-group">
                 <button type="submit" name="submit">Login</button>
             </div>
-
+            <br> &emsp;&nbsp;
+            New User? Click <a href="register.php">Here</a> to Register
         </form>
     </div>
-    <a href="register.php">Registration</a>
+    
   </body>
 </html>
-
