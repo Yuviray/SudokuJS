@@ -116,6 +116,8 @@ audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
+    text-align: center;
+    text-transform: uppercase;
 }
 .wrap h1 span {
     text-align: center;
@@ -158,7 +160,7 @@ h2{
 ,.js-analyze-board-btn,.js-clear-board-btn,.js-solve-all-btn
 ,.js-solve-step-btn{
     
-    background-color: rgba(255, 255, 255, 0.5); /* Green */
+    background-color: rgba(255, 255, 255, 0.5);
     border: black 2px solid;
     color: black;
     padding: 3px;

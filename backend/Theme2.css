@@ -147,7 +147,7 @@ h2{
 ,.js-analyze-board-btn,.js-clear-board-btn,.js-solve-all-btn
 ,.js-solve-step-btn{
     
-    background-color: rgba(255, 255, 255, 0.5); /* Green */
+    background-color: rgba(255, 255, 255, 0.5);
     border: black 2px solid;
     color: black;
     padding: 3px;
