@@ -1,16 +1,21 @@
+<?php
+require 'config.php';
+if(!empty($_SESSION["id"])){
+  $id = $_SESSION["id"];
+  $result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+  $row = mysqli_fetch_assoc($result);
+}
+else{
+  header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<link rel="stylesheet" media="all" type="text/css" href="sudokuJS.css">
+		<link rel="stylesheet" media="all" type="text/css" href="theme1.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
-
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
-		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
-		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
-		
-
 		<style>
 			* {
 				margin:0; padding:0;
@@ -39,43 +44,6 @@
 				}
 			}
 
-			.menuBar 
-			{
-				background-color: rgb(37, 36, 36);
-				overflow: hidden;
-				position: relative;
-				top: 0;
-				width: 100%;
-				border: 10px;
-				min-width: 100%;
-			}
-  
-			.menuBar menuButton
-			{
-				float: right;
-				color: #FFF;
-				text-align: center;
-				padding: 10px 16px;
-				text-decoration: none;
-				font-size: 17px;
-			}
-
-			.menuBar menuButton.left
-			{
-				float: left;
-				color: #FFF;
-				text-align: center;
-				padding: 10px 16px;
-				text-decoration: none;
-				font-size: 17px;
-			}
-
-			.menuBar menuButton:hover,.menuBar menuButton.left:hover
-			{
-				background-color: #ddd;
-				color: black;
-			}
-
 		</style>
 
 		<title>Sudoku Plus Demo</title>
@@ -86,10 +54,6 @@
 	</head>
 
 	<body>
-		<div class="menuBar">
-			<menuButton class="left" href="#home">Home</menuButton>
-			<menuButton href="#profile">Profile</menuButton>
-		</div>
 
 		<!-- This is the whole tutorial button in html -->
 		<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
@@ -111,32 +75,15 @@
 				If the number is wrong the square will light up red, and blue if correct.
 			</div>
 		</div>
-		
-		<script class="activate-A-Theme">
-			function useTheme1()
-			{
-			document.getElementById('theme2').disabled  = true;
-			document.getElementById('theme1').disabled = false;
-			}
+		<div id="overlay"></div>
 
-			function useTheme2()
-			{
-			document.getElementById('theme2').disabled  = false;
-			document.getElementById('theme1').disabled = true;
-			}
-		</script>
-		
-		<br><br>
-		<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
-		<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
-	
-	<div id="overlay"></div>
 
-	<!--
-	<audio controls>
+		<audio controls>
 		<source src="loop-130-bpm.mp3"  type="audio/mp3">
 	</audio>
-	//-->
+  
+  <h1>Welcome <?php echo $row["user_name"]; ?></h1>
+    <a href="logout.php">Logout</a>
 
 	<div id="parent">
 	<div id="wide" class="wrap">
@@ -172,40 +119,66 @@
 		<!--clear board btn-->
 		</h2><button type="button" class="js-clear-board-btn">Clear Board</button>
 	</div>
+<!--backend php code that updates table if new score if greater-->
+<?php
+    if(isset($_POST["submit"])){
+    	$newScore = intval($_POST['newScore']);
+    	$id = $_SESSION["id"];
+    	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+    	$row = mysqli_fetch_assoc($result);
+    if(mysqli_num_rows($result) > 0){
+    	if($newScore > $row['score']){
+        	$sql = "update users set score=? where id=?;";
+        	$stmt = $conn->stmt_init();
+        	$stmt->prepare($sql);
+        	$stmt->bind_param('ss',  $newScore, $id);
+			$stmt->execute();
+      	}
+    	}
+  	}
+  
+  	?>
+	<!--form submission for testing input need to change for game-->
+  	<h2>update score</h2>
+      <form class="" action="" method="post" autocomplete="off">
+        <label for="newScore">new score : </label>
+        <input type="text" name="newScore" id = "newScore" required value=""> <br>
+        <button type="submit" name="submit">update</button>
+      </form>
+      <br>
+	<!--leader board need styling-->
+	<h2>leader board</h2>
+        <table>
+            <tr>
+                <td>Ranking</td>
+                <td>UserName</td>
+                <td>Score</td>
+            </tr>
 
-	<div id="narrow">
-		<h1 class="h1">Leaderboard</h1>
+			<!--displays the rankings in order-->
 
-    	<div id="container">
-
-      	<div class="row">
-        	<div class="name">Name :</div><div class="score">Time :</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player1</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player2</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player3</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player4</div><div class="score">00.00s</div>
-      	</div>
-
-      	<div class="row">
-        	<div class="name">Player5</div><div class="score">00.00s</div>
-      	</div>
-
-    	</div>
+			<?php
+  			/* Mysqli query to fetch rows 
+  			in descending order of marks */
+  			$result = mysqli_query($conn, "SELECT user_name, 
+  				score FROM users ORDER BY score DESC");
+	
+  			/* First rank will be 1 and 
+	  		second be 2 and so on */
+  			$ranking = 1;
+	
+  			/* Fetch Rows from the SQL query */
+  			if (mysqli_num_rows($result)) {
+	  			while ($row = mysqli_fetch_array($result)) {// code the prints ranking will need inline css
+		  			echo "<tr><td>{$ranking}</td> 
+		  			<td>{$row['user_name']}</td>
+		  			<td>{$row['score']}</td></tr>";
+		  			$ranking++;
+	  			}
+  			}
+  			?>
+		</table>
 	</div>
-	</div>
-
 
 	
 
