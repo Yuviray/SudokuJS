@@ -1,15 +1,23 @@
+<?php
+require 'config.php';
+if(!empty($_SESSION["id"])){
+  $id = $_SESSION["id"];
+  $result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+  $row = mysqli_fetch_assoc($result);
+}
+else{
+  header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<link rel="stylesheet" media="all" type="text/css" href="sudokuJS.css">
-		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
 
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
-		
 
 		<style>
 			* {
@@ -39,15 +47,17 @@
 				}
 			}
 
+			/* ---- Menu Bar Styling ---- */
 			.menuBar 
 			{
-				background-color: rgb(37, 36, 36);
+				background-color: #111;
 				overflow: hidden;
 				position: relative;
 				top: 0;
 				width: 100%;
 				border: 10px;
 				min-width: 100%;
+				user-select: none;
 			}
   
 			.menuBar menuButton
@@ -76,6 +86,7 @@
 				color: black;
 			}
 
+			/* ---- Menu Bar Styling ---- */
 		</style>
 
 		<title>Sudoku Plus Demo</title>
@@ -86,10 +97,18 @@
 	</head>
 
 	<body>
+
 		<div class="menuBar">
-			<menuButton class="left" href="#home">Home</menuButton>
-			<menuButton href="#profile">Profile</menuButton>
+			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
+			<menuButton onclick="logoutScript()">Logout</menuButton>
 		</div>
+
+		<script> 
+			function logoutScript()
+			{ 
+				window.location.assign('logout.php');
+			}
+		</script>
 
 		<!-- This is the whole tutorial button in html -->
 		<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
@@ -111,7 +130,8 @@
 				If the number is wrong the square will light up red, and blue if correct.
 			</div>
 		</div>
-		
+
+		<!-- Change Themes and Buttons -->
 		<script class="activate-A-Theme">
 			function useTheme1()
 			{
@@ -127,16 +147,20 @@
 		</script>
 		
 		<br><br>
+
 		<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
 		<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
-	
-	<div id="overlay"></div>
+		<!-- Change Themes and Buttons -->
+
+		<div id="overlay"></div>
 
 	<!--
 	<audio controls>
 		<source src="loop-130-bpm.mp3"  type="audio/mp3">
 	</audio>
-	//-->
+	-->
+		
+  	<!-- <h1>Welcome < ?php echo $row["user_name"];?></h1> -->
 
 	<div id="parent">
 	<div id="wide" class="wrap">
@@ -172,40 +196,110 @@
 		<!--clear board btn-->
 		</h2><button type="button" class="js-clear-board-btn">Clear Board</button>
 	</div>
+<!--backend php code that updates table if new score if greater-->
+<?php
+    if(isset($_POST["submit"])){
+    	$newScore = intval($_POST['newScore']);
+    	$id = $_SESSION["id"];
+    	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+    	$row = mysqli_fetch_assoc($result);
+    if(mysqli_num_rows($result) > 0){
+    	if($newScore > $row['score']){
+        	$sql = "update users set score=? where id=?;";
+        	$stmt = $conn->stmt_init();
+        	$stmt->prepare($sql);
+        	$stmt->bind_param('ss',  $newScore, $id);
+			$stmt->execute();
+      	}
+    	}
+  	}
+  
+  	?>
+	<!--form submission for testing input need to change for game-->
+  	<h2>Update Score: </h2>
+      <form class="" action="" method="post" autocomplete="off">
+        <label for="newScore">new score : </label>
+        <input type="text" name="newScore" id = "newScore" required value=""> <br>
+        <button type="submit" name="submit">update</button>
+      </form>
+      <br>
+	<!--leader board need styling-->
 
-	<div id="narrow">
-		<h1 class="h1">Leaderboard</h1>
+	<style>
+		.content-table{
 
-    	<div id="container">
+			border-collapse: collapse;
+			margin: 25px 0;
+			font-size: 0.9em;
+			min-width: 400px;
+			border-radius: 5px 5px 0 0;
+			overflow: hidden;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+		}
 
-      	<div class="row">
-        	<div class="name">Name :</div><div class="score">Time :</div>
-      	</div>
+		.content-table thread tr{
 
-      	<div class="row">
-        	<div class="name">Player1</div><div class="score">00.00s</div>
-      	</div>
+			background-color: #009879 ;
+			color: #ffffff;
+			text-align: left;
+			font-weight: bold;
+		}
 
-      	<div class="row">
-        	<div class="name">Player2</div><div class="score">00.00s</div>
-      	</div>
+		.content-table th,
+		.content-table td{
 
-      	<div class="row">
-        	<div class="name">Player3</div><div class="score">00.00s</div>
-      	</div>
+			padding: 12px 15px;
+		}
 
-      	<div class="row">
-        	<div class="name">Player4</div><div class="score">00.00s</div>
-      	</div>
+		.content-table tbody tr{
+			border-bottom: 1px solid #dddddd;
 
-      	<div class="row">
-        	<div class="name">Player5</div><div class="score">00.00s</div>
-      	</div>
+		}
 
-    	</div>
+		.content-table tbody tr:nth-of-type(even){
+			background-color: #f3f3f3;
+
+		}
+
+		.content-table tbody tr:last-of-type{
+			border-bottom: 2px solid #009879
+
+		}
+
+
+	</style>
+	<h2>Leaderboard: </h2>
+        <table class="content-table">
+            <tr>
+                <td>Ranking</td>
+                <td>UserName</td>
+                <td>Score</td>
+            </tr>
+
+			<!--displays the rankings in order-->
+
+			<?php
+  			/* Mysqli query to fetch rows 
+  			in descending order of marks */
+  			$result = mysqli_query($conn, "SELECT user_name, 
+  				score FROM users ORDER BY score DESC");
+	
+  			/* First rank will be 1 and 
+	  		second be 2 and so on */
+  			$ranking = 1;
+	
+  			/* Fetch Rows from the SQL query */
+  			if (mysqli_num_rows($result)) {
+	  			while ($row = mysqli_fetch_array($result)) {// code the prints ranking will need inline css
+		  			echo "<tr><td>{$ranking}</td> 
+		  			<td>{$row['user_name']}</td>
+		  			<td>{$row['score']}</td></tr>";
+		  			$ranking++;
+	  			}
+  			}
+  			?>
+		</table>
 	</div>
-	</div>
-
 
 	
 
