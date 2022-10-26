@@ -1,5 +1,5 @@
 .sudoku-board {
-    min-height: 22.75rem;
+    min-height: 30rem;
     margin-bottom: 1em;
 }
 
@@ -13,7 +13,7 @@ body{
     position: relative;
     border: 1px solid #334747;
     background-color: #f4e9cd;
-    max-width: 11.11111%;
+    max-width: 20.11111%;
 }
 /*rules for drawing the black lines dividing houses
     -- specific for board size 9! need diff rules for diff board sizes
