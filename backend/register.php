@@ -11,7 +11,8 @@ if(isset($_POST["submit"])){
   $email = $_POST["email"];
   $password = $_POST["pwd"];
   $confirmpassword = $_POST["r_pwd"];
-  $score = 0;
+  $minutes = 0;
+  $seconds = 0;
   $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE user_name = '$username' OR email = '$email'");
   if(mysqli_num_rows($duplicate) > 0){
     echo
@@ -19,7 +20,7 @@ if(isset($_POST["submit"])){
   }
   else{
     if($password == $confirmpassword){
-      $query = "INSERT INTO users VALUES('$test','$fname','$lname','$username','$email','$password', '$confirmpassword','$score')";
+      $query = "INSERT INTO users VALUES('$test','$fname','$lname','$username','$email','$password', '$confirmpassword','$minutes', '$seconds')";
       mysqli_query($conn, $query);
       echo
       "<script> alert('Registration Successful'); </script>";

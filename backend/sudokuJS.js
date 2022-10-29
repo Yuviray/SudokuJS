@@ -1475,6 +1475,7 @@
 
 				//check if that finished board
 				if(isBoardFinished()){
+					stop();
 					boardFinished = true;
 					log("user finished board!");
 					if(typeof opts.boardFinishedFn === "function"){
@@ -1754,10 +1755,18 @@
 
 		function stop() {
             clearInterval(check);
-            check = null;
-			secondsLabel.innerHTML = "00";
-        	minutesLabel.innerHTML = "00";
-			totalSeconds = 0;
+			if(isBoardFinished()==true)
+			{	
+				var mins = minutesLabel.innerHTML;
+				var secs = secondsLabel.innerHTML;
+				window.location.href = "index.php?w1=" + mins + "&w2=" + secs;
+			}
+			else{
+            	check = null;
+				secondsLabel.innerHTML = "00";
+        		minutesLabel.innerHTML = "00";
+				totalSeconds = 0;
+			}
         }
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
