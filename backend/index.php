@@ -207,18 +207,19 @@ else{
 <!--backend php code that updates table if new score if greater-->
 <?php
 
-	if(isset($_GET["w1"]) && isset($_GET["w2"])){
-		$mins = intval($_GET["w1"]);
-		$secs = intval($_GET["w2"]);
-  		$id = $_SESSION["id"];
-  		$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
-		$row = mysqli_fetch_assoc($result);
-	}
+
+	$mins = intval($_GET["w1"]);
+	$secs = intval($_GET["w2"]);
+  	$id = $_SESSION["id"];
+  	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+	$row = mysqli_fetch_assoc($result);
+	
 	$sql = "update users set minutes=? where id=?;";
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($sql);
 	$stmt->bind_param('ss',  $mins, $id);
 	$stmt->execute();
+
 	$sql = "update users set seconds=? where id=?;";
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($sql);
