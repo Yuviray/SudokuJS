@@ -188,33 +188,25 @@ else{
 	</div>
 	<!--backend php code that updates table if new score if greater-->
 <?php
-    if(isset($_POST["submit"])){
-    	$newScore = intval($_POST['newScore']);
-    	$id = $_SESSION["id"];
-    	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
-    	$row = mysqli_fetch_assoc($result);
-    if(mysqli_num_rows($result) > 0){
-    	if($newScore > $row['score']){
-        	$sql = "update users set score=? where id=?;";
-        	$stmt = $conn->stmt_init();
-        	$stmt->prepare($sql);
-        	$stmt->bind_param('ss',  $newScore, $id);
-			$stmt->execute();
-      	}
-    	}
-  	}
+	if(isset($_GET["w1"]) && isset($_GET["w2"])){
+		$mins = intval($_GET["w1"]);
+		$secs = intval($_GET["w2"]);
+  		$id = $_SESSION["id"];
+  		$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+		$row = mysqli_fetch_assoc($result);
+	}
+	$sql = "update users set minutes=? where id=?;";
+	$stmt = $conn->stmt_init();
+	$stmt->prepare($sql);
+	$stmt->bind_param('ss',  $mins, $id);
+	$stmt->execute();
+	$sql = "update users set seconds=? where id=?;";
+	$stmt = $conn->stmt_init();
+	$stmt->prepare($sql);
+	$stmt->bind_param('ss',  $secs, $id);
+	$stmt->execute();																											
   
   	?>
-	<!--form submission for testing input need to change for game-->
-  	<h2>Update Score: </h2>
-      <form class="" action="" method="post" autocomplete="off">
-        <label for="newScore">new score : </label>
-        <input type="text" name="newScore" id = "newScore" required value=""> <br>
-        <button type="submit" name="submit">update</button>
-      </form>
-      <br>
-	<!--leader board need styling-->
-
 	<style>
 		.content-table{
 
@@ -263,7 +255,7 @@ else{
             <tr>
                 <td>Ranking</td>
                 <td>UserName</td>
-                <td>Score</td>
+                <td>Times</td>
             </tr>
 
 			<!--displays the rankings in order-->
@@ -271,8 +263,8 @@ else{
 			<?php
   			/* Mysqli query to fetch rows 
   			in descending order of marks */
-  			$result = mysqli_query($conn, "SELECT user_name, 
-  				score FROM users ORDER BY score DESC");
+			$result = mysqli_query($conn, "SELECT user_name, 
+  				minutes, seconds FROM users ORDER BY minutes, seconds ASC");
 	
   			/* First rank will be 1 and 
 	  		second be 2 and so on */
@@ -283,7 +275,7 @@ else{
 	  			while ($row = mysqli_fetch_array($result)) {// code the prints ranking will need inline css
 		  			echo "<tr><td>{$ranking}</td> 
 		  			<td>{$row['user_name']}</td>
-		  			<td>{$row['score']}</td></tr>";
+		  			<td>{$row['minutes']}:{$row['seconds']}s</td></tr>";
 		  			$ranking++;
 	  			}
   			}

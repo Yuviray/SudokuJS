@@ -220,35 +220,9 @@ else{
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($sql);
 	$stmt->bind_param('ss',  $secs, $id);
-	$stmt->execute();
-	
-	/*
-    if(isset($_POST["submit"])){
-    	$newScore = intval($_POST['newScore']);
-    	$id = $_SESSION["id"];
-    	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
-    	$row = mysqli_fetch_assoc($result);
-    if(mysqli_num_rows($result) > 0){
-    	if($newScore > $row['score']){
-        	$sql = "update users set score=? where id=?;";
-        	$stmt = $conn->stmt_init();
-        	$stmt->prepare($sql);
-        	$stmt->bind_param('ss',  $newScore, $id);
-			$stmt->execute();
-      	}
-    	}
-  	}*/																												
+	$stmt->execute();																											
   
   	?>
-	<!--form submission for testing input need to change for game-->
-  	<!--<h2>Update Score: </h2>
-      <form class="" action="" method="post" autocomplete="off">
-        <label for="newScore">new score : </label>
-        <input type="text" name="newScore" id = "newScore" required value=""> <br>
-        <button type="submit" name="submit">update</button>
-      </form>
-      <br>
-	<!--leader board need styling-->
 
 	<style>
 		.content-table{
