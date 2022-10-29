@@ -17,6 +17,7 @@ else{
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
+		<link id=FallTheme rel="stylesheet" type="text/css" href="FallTheme.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
 
 		<style>
@@ -91,6 +92,7 @@ else{
 
 		<title>Sudoku Plus Demo</title>
 
+		
 		<script defer src="tutorial.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script type="text/javascript" src="sudokuJS.js"></script>
@@ -107,6 +109,7 @@ else{
 
 			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
 			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
+			<button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
 		</div>
 
 		<script> 
@@ -145,13 +148,22 @@ else{
 		<script class="activate-A-Theme">
 			function useTheme1()
 			{
+			document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = false;
 			}
 
 			function useTheme2()
 			{
+			document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = false;
+			document.getElementById('theme1').disabled = true;
+			}
+
+			function useFallTheme()
+			{
+			document.getElementById('FallTheme').disabled  = false;
+			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = true;
 			}
 		</script>
@@ -206,7 +218,7 @@ else{
 	</div>
 <!--backend php code that updates table if new score if greater-->
 <?php
-
+	error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
 
 	$mins = intval($_GET["w1"]);
 	$secs = intval($_GET["w2"]);
