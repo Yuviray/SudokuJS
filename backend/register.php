@@ -78,7 +78,7 @@ if(isset($_POST["submit"])){
 
                 <button type="submit" name="submit">Register</button>
 
-                <button type = "submit" name="backtologin onclick="backToLoginScript()";">Back to Login </button>
+                <button type = "submit" name="backtologin" onclick="backToLoginScript()";">Back to Login </button>
 
 
             </div>
