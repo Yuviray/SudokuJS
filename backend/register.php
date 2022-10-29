@@ -77,13 +77,16 @@ if(isset($_POST["submit"])){
             <div class="form-group">
 
                 <button type="submit" name="submit">Register</button>
+
+                <button type = "submit" name="backtologin onclick="backToLoginScript()";">Back to Login </button>
+
+
             </div>
         </form>
     </div>
 
     <br> &nbsp;&nbsp;
 
-    <button onclick="backToLoginScript()">Back to Login</button>
 
     <script> 
 			function backToLoginScript()
