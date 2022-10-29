@@ -117,6 +117,11 @@ else{
 			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
 			<menuButton onclick="logoutScript()">Logout</menuButton>
 			<menuButton onclick="oldGameScript()">Normal</menuButton>
+
+			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
+
+			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
+			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
 		</div>
 
 		<script> 
@@ -131,7 +136,6 @@ else{
 		</script>
 
 		<!-- This is the whole tutorial button in html -->
-		<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 		<div class="modal" id = "modal">
 			<div class ="modal-header">
 				<div class="title">Sudoku Tutorial</div>
@@ -168,8 +172,7 @@ else{
 		
 		<br><br>
 
-		<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
-		<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
+	
 		<!-- Change Themes and Buttons -->
 
 		<div id="overlay"></div>
