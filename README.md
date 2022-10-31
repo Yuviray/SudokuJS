@@ -118,12 +118,64 @@ Provide various use cases and code examples here.
         use custom fonts easily for future themes
     https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/04c45d23bf9840c08f0af94b467044b0f427a84d
 
-### Sprint 2 in Progress
+### Sprint 2 ideas
 
 - Yuvanesh Rajamani: 
     * adding php functionality to the main site
     * implementing user data to sql
     * adding 16x16 game mode
+- Waleed Naveed:
+- Nico Maldonado:
+    * Attach users scores with the leaderboard
+    * Make a live tutorial for the tutorial window
+    * Add a timer so that user can make high score
+- Alberto Veloso:
+    * make the music player invisible and make music autoplay in background (to be discussed)
+    * add an additional theme to the game
+    * make the theme change according to game difficulty
+- Miguel Vertiz:
+    * implement a manual theme change button
+    * allow for prefered themes to be saved for each user
+
+### Sprint 2 Ended 10/28/2022
+
+- Yuvanesh Rajamani: 
+    * SP1-26: Teaching members how to setup SQL database: 
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-23
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/src/9ac8b1c6c7812ac8086ff59c999d2d196474239a/SQl_setup.txt
+    * SP1-38: Refactor backend to work better: 
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-38
+        * https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/commits/2c812bc61cfbc28dee8f8f59d8d77c525bf0b7f0
+    * SP1-28: Connect leaderboard with the backend: 
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-28
+        * https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/commits/458a7c9b9d40c724b29d5c6165188ac5ee968b66
+    * SP1-36: Create new 16x16 grid for sudoku game: 
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-36
+        * https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/commits/f55147b1ab591937c0fc2d66d2a4fdb92f9c6bcd
+- Waleed Naveed:
+    * added styling to fronted - https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/b83b772e7390ddd8d4a924dd1cb7ce17f28c08f3
+    * research sudoku album-  https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06e8682dee18a240d3040e0286122877434eebcb
+- Nico Maldonado:
+    * added tutorial window for new player
+    * added leaderboard for players
+    * researched JAVASCRIPT
+- Alberto Veloso:
+    * Added music to the background
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/490aafb91e32954e1f5247232f00c62b8574d5e4
+    * Added some research about HTML and Javascript
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/1e26bc7871180d53e58b1494aae997de8697c576
+- Miguel Vertiz:
+    * Created and designed theme 1
+    * Reasearched and changed setup of HTML for themes to
+        use custom fonts easily for future themes
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/04c45d23bf9840c08f0af94b467044b0f427a84d
+
+### Sprint 3 ideas
+
+- Yuvanesh Rajamani: 
+    * maybe refactor and set up website using react and mongod db
+    * add more games
+    * store more game data in the server
 - Waleed Naveed:
 - Nico Maldonado:
     * Attach users scores with the leaderboard
