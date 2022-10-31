@@ -1776,7 +1776,10 @@
 		 *-----------*/
 		if(!opts.board) {
 			initBoard(opts);
-			//generateBoard(opts);
+			if(boardSize == 16)
+			{
+				generateBoard(opts);
+			}
 			renderBoard();
 		} else {
 			board = opts.board;
