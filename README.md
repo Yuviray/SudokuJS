@@ -169,10 +169,12 @@ Provide various use cases and code examples here.
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/836d48bd326b7da45d8b9c75532d94cdd94a9fdf
         * https://cs3398f22betazoids.atlassian.net/browse/SP1-34?atlOrigin=eyJpIjoiZGUxMDQyOGFiNzAyNDg3YzkxYmJkOTVlZTZlZDRlYzkiLCJwIjoiaiJ9
 - Alberto Veloso:
-    * Added music to the background
-    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/490aafb91e32954e1f5247232f00c62b8574d5e4
-    * Added some research about HTML and Javascript
-    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/1e26bc7871180d53e58b1494aae997de8697c576
+    * Styling the leaderboard
+        * https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/branch/SP1-9-styling-the-leaderboard
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06f624a20f515c85144da99a71c413cde1dbb5a1
+    * Setting up SQL database for user systems
+    https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/branch/SP1-23-setting-up-sql-database-for-user
+    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/1b317ed5966e40f6b621720483f77c06246c4b7f
 - Miguel Vertiz:
     * Created and designed theme 1
     * Reasearched and changed setup of HTML for themes to
@@ -192,8 +194,7 @@ Provide various use cases and code examples here.
     * Fix timer bugs so that user can save scores.
 - Alberto Veloso:
     * make the music player invisible and make music autoplay in background (to be discussed)
-    * add an additional theme to the game
-    * make the theme change according to game difficulty
+    * if not possible do make it invisible, maybe create a simple music player 
 - Miguel Vertiz:
     * implement a manual theme change button
     * allow for prefered themes to be saved for each user
