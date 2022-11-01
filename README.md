@@ -156,9 +156,18 @@ Provide various use cases and code examples here.
     * added styling to fronted - https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/b83b772e7390ddd8d4a924dd1cb7ce17f28c08f3
     * research sudoku album-  https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06e8682dee18a240d3040e0286122877434eebcb
 - Nico Maldonado:
-    * added tutorial window for new player
-    * added leaderboard for players
-    * researched JAVASCRIPT
+    * SP1-29 : Connect leaderboard with the backend:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/4f69aaaf4ba96e539550f70c62815e10aa04d797
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-29?atlOrigin=eyJpIjoiMWIyOWQwNDExNzc1NDk3NmI5YjY1OGFjOGRhOTkyNjkiLCJwIjoiaiJ9
+    * SP1-24 : Setting up SQL database for user system:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/c2411332cacabc557feffe7afd2f318ce1166070
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-24?atlOrigin=eyJpIjoiMzExZTlkMjQ0YTM2NDk3NWFlZTNlMTQ5MWQ0ZWFkYTQiLCJwIjoiaiJ9
+    * SP1-39 : Create timer for leaderboard scores:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/aaf8833e60e6039430ea6af05cd6e333a1bb92f1
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-39?atlOrigin=eyJpIjoiNjk1MjRmNmM2ZWI2NGM4Mjg4OTExODhmMzBlMmEzMGYiLCJwIjoiaiJ9
+    * SP1-34 : Create new 16x16 grid for sudoku game:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/836d48bd326b7da45d8b9c75532d94cdd94a9fdf
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-34?atlOrigin=eyJpIjoiZGUxMDQyOGFiNzAyNDg3YzkxYmJkOTVlZTZlZDRlYzkiLCJwIjoiaiJ9
 - Alberto Veloso:
     * Added music to the background
     https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/490aafb91e32954e1f5247232f00c62b8574d5e4
@@ -178,9 +187,9 @@ Provide various use cases and code examples here.
     * store more game data in the server
 - Waleed Naveed:
 - Nico Maldonado:
-    * Attach users scores with the leaderboard
-    * Make a live tutorial for the tutorial window
-    * Add a timer so that user can make high score
+    * Add leaderboards for different difficulties in the game.
+    * Update the timer to make it pop out more.
+    * Fix timer bugs so that user can save scores.
 - Alberto Veloso:
     * make the music player invisible and make music autoplay in background (to be discussed)
     * add an additional theme to the game
