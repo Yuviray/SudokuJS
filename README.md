@@ -175,10 +175,15 @@ Provide various use cases and code examples here.
     https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/branch/SP1-23-setting-up-sql-database-for-user
     https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/1b317ed5966e40f6b621720483f77c06246c4b7f
 - Miguel Vertiz:
-    * Created and designed theme 1
-    * Reasearched and changed setup of HTML for themes to
-        use custom fonts easily for future themes
-    https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/04c45d23bf9840c08f0af94b467044b0f427a84d
+    * Create seasonal themes for the theme button
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/726384c341a8b4ad7a620a96202bee5649661f22
+    * Make theme button for user to change theme
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/2e8ef8a582ce4bcb3d393ff123f269288839e851
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/8949cd0f9983d61a6504c8a71d743e8fef58f27b
+    * Setting up SQL database for user systems
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/733cb83d5c2b603fb824779e5a3f650760019eee
+    * Bug Fix: Sudoku Board Rows Overflowed
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/8d398a7a93f951a51160d7c3ee675d87e26f3c9a
 
 ### Sprint 3 ideas
 
@@ -198,8 +203,8 @@ Provide various use cases and code examples here.
     * make the music player invisible and make music autoplay in background (to be discussed)
     * if not possible do make it invisible, maybe create a simple music player 
 - Miguel Vertiz:
-    * implement a manual theme change button
-    * allow for prefered themes to be saved for each user
+    * Add functionality to the Profile button for user to see score and details (Profile Page)
+    * Refactor our current styling method to make it easier to add Themes
 
 
 ## Room for Improvement
@@ -208,6 +213,8 @@ Include areas you believe need improvement / could be improved. Also add TODOs f
 Room for improvement:
 - Nico Maldonado: 
     * I would like to improve on communication with my teammates so that I can implement functions easier.
+- Miguel Vertiz: 
+    * I would like to find a way to implement our work to be accessible online.
 
 To do:
 - Feature to be added 1
@@ -220,7 +227,7 @@ Give credit here.
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+
 
 
 <!-- Optional -->
