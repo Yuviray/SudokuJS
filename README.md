@@ -153,9 +153,8 @@ Provide various use cases and code examples here.
         * https://cs3398f22betazoids.atlassian.net/browse/SP1-36
         * https://bitbucket.org/cs3398f22betazoids/%7Bc633b399-34fa-4eaa-9891-e84541385db7%7D/commits/f55147b1ab591937c0fc2d66d2a4fdb92f9c6bcd
 - Waleed Naveed:
-    * added styling to fronted - https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/b83b772e7390ddd8d4a924dd1cb7ce17f28c08f3
-    * research sudoku album-  https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/06e8682dee18a240d3040e0286122877434eebcb
-- Nico Maldonado:
+    * reformat the front layout -https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/cf04dcac0044315aac68bbaf9faf809bde7525dd
+    * changed buttons and layouts -  https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/bcef7f7aa8745e41e67c704cb53c556581e50e5f
     * SP1-29 : Connect leaderboard with the backend:
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/4f69aaaf4ba96e539550f70c62815e10aa04d797
         * https://cs3398f22betazoids.atlassian.net/browse/SP1-29?atlOrigin=eyJpIjoiMWIyOWQwNDExNzc1NDk3NmI5YjY1OGFjOGRhOTkyNjkiLCJwIjoiaiJ9
@@ -188,6 +187,9 @@ Provide various use cases and code examples here.
     * add more games
     * store more game data in the server
 - Waleed Naveed:
+    * add more games
+    * make the interface of the games more appealing 
+    * look into app format
 - Nico Maldonado:
     * Add leaderboards for different difficulties in the game.
     * Update the timer to make it pop out more.
