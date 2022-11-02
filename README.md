@@ -155,6 +155,7 @@ Provide various use cases and code examples here.
 - Waleed Naveed:
     * reformat the front layout -https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/cf04dcac0044315aac68bbaf9faf809bde7525dd
     * changed buttons and layouts -  https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/bcef7f7aa8745e41e67c704cb53c556581e50e5f
+- Nico  Maldonado
     * SP1-29 : Connect leaderboard with the backend:
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/4f69aaaf4ba96e539550f70c62815e10aa04d797
         * https://cs3398f22betazoids.atlassian.net/browse/SP1-29?atlOrigin=eyJpIjoiMWIyOWQwNDExNzc1NDk3NmI5YjY1OGFjOGRhOTkyNjkiLCJwIjoiaiJ9
