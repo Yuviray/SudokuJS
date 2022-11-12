@@ -5,8 +5,10 @@ if(!empty($_SESSION["id"])){
   header("Location: index.php");
 }
 if(isset($_POST["submit"])){
-  $usernameemail = $_POST["usernameemail"];
-  $password = $_POST["password"];
+  //$usernameemail = $_POST["usernameemail"];
+  //$password = $_POST["password"];
+  $usernameemail = filter_var($_POST["usernameemail"], FILTER_SANITIZE_STRING);
+  $password = filter_var($_POST["password"], FILTER_SANITIZE_STRING);
   $result = mysqli_query($conn, "SELECT * FROM users WHERE user_name = '$usernameemail' OR email = '$usernameemail'");
   $row = mysqli_fetch_assoc($result);
   if(mysqli_num_rows($result) > 0){
