@@ -12,7 +12,9 @@ if(isset($_POST["submit"])){
   $result = mysqli_query($conn, "SELECT * FROM users WHERE user_name = '$usernameemail' OR email = '$usernameemail'");
   $row = mysqli_fetch_assoc($result);
   if(mysqli_num_rows($result) > 0){
-    if($password == $row['pwd']){
+    $isValid = password_verify($password, $row['pwd']);
+    if ($isValid) {
+    //if($password == $row['pwd']){
       $_SESSION["login"] = true;
       $_SESSION["id"] = $row["id"];
       header("Location: index.php");
