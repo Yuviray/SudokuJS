@@ -1,4 +1,5 @@
 <?php
+namespace Tester;
 require 'config.php';
 if(!empty($_SESSION["id"])){
   header("Location: index.php");
