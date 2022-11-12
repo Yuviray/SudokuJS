@@ -1,4 +1,5 @@
 <?php
+namespace Tester;
 require 'config.php';
 $_SESSION = [];
 session_unset();

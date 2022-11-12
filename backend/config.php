@@ -1,3 +1,9 @@
 <?php
+namespace Tester;
+require "configClass.php";
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "sudokuPlus");
+$h = new ConfigClass( "localhost","root","", "sudokuPlus" );
+
+$conn = mysqli_connect($h->getHost(), $h->getRoot(),$h->getPass(), $h->getDb());
+//$conn = mysqli_connect( "localhost","root","", "sudokuPlus" );
+?>
