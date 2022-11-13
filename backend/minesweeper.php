@@ -22,7 +22,6 @@ else{
         <script src="mines.js" charset="utf-8"></script>
         
 		<style>
-           
 
 		/* ---- Menu Bar Styling ---- */
 		.menuBar 
@@ -68,7 +67,8 @@ else{
 
 		</style>
 
-		<title>SudokuJS - board size 16</title>
+		<title>Minesweeper</title>
+        
 	</head>
 
 	<body>
@@ -99,6 +99,25 @@ else{
 				window.location.assign('16x16.php');
 			}
 		</script>	
+        <div class="modal" id = "modal">
+			<div class ="modal-header">
+				<div class="title">Minesweeper Tutorial</div>
+				<button data-close-button class="close-button">&times;</button>
+			</div>
+			<div class = "modal-body">
+				This will help you understand how to play the popular game Minesweeper!
+				This game will be played on a 10x10 grid and there are 20 Bombs on the grid.
+				<div class = "modal-ul">
+					<ul>
+						<li>Click on a Bomb and your dead</li>
+						<li>Numbers represent the amount of Bombs surrounding </li>
+					</ul>
+				</div>
+				To start solving click on a square and input the number that you think is correct.
+				If the number is wrong the square will light up red, and blue if correct.
+			</div>
+		</div>
+        
 		<!-- Change Themes and Buttons -->
 		<script class="activate-A-Theme">
 			function useTheme1()
@@ -130,7 +149,9 @@ else{
             <div>Flags left: <span id='flags-left'></span></div>
             <div id="result"></div>
         </div>
-        
+        <script defer src="tutorial.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="sudokuJS.js"></script>
 	
 		<!-- Change Themes and Buttons -->
 
