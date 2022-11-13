@@ -21,6 +21,8 @@ if(isset($_POST["submit"])){
   }
   else{
     if($password == $confirmpassword){
+      $password = password_hash($password, PASSWORD_DEFAULT);
+      $confirmpassword = password_hash($confirmpassword, PASSWORD_DEFAULT);
       $query = "INSERT INTO users VALUES('$test','$fname','$lname','$username','$email','$password', '$confirmpassword','$minutes', '$seconds')";
       mysqli_query($conn, $query);
       echo
