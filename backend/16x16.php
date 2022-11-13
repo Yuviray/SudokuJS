@@ -120,6 +120,7 @@ else{
 			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
 			<menuButton onclick="logoutScript()">Logout</menuButton>
 			<menuButton onclick="oldGameScript()">Normal</menuButton>
+			<menuButton onclick="minesScript()">Minesweeper</menuButton>
 
 			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
@@ -136,6 +137,10 @@ else{
 			function oldGameScript()
 			{ 
 				window.location.assign('index.php');
+			}
+			function minesScript()
+			{ 
+				window.location.assign('minesweeper.php');
 			}
 		</script>
 
