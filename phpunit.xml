@@ -4,8 +4,8 @@
     stopOnFailure="false">
 
     <testsuites>
-        <testsuite name="Test">
-            <directory>phpTest</directory>
+        <testsuite name="SudokuIndexTest">
+             <directory>phpTestMV</directory>
         </testsuite>
     </testsuites>
 </phpunit>
