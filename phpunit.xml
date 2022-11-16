@@ -5,7 +5,7 @@
 
     <testsuites>
         <testsuite name="Test">
-            <directory>phpTest</directory>
+            <directory>phpTestMV</directory>
         </testsuite>
     </testsuites>
 </phpunit>
