@@ -225,13 +225,24 @@ else{
 <!--backend php code that updates table if new score if greater-->
 <?php
 	error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
-
+	
 	$mins = intval($_GET["w1"]);
 	$secs = intval($_GET["w2"]);
+	if($secs > 0){
   	$id = $_SESSION["id"];
   	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
 	$row = mysqli_fetch_assoc($result);
 	
+
+	/*function add ($mins, $secs) {
+    $this->query(
+      "INSERT INTO `user` ('minutes', 'seconds') VALUES($mins,$secs)",
+      [$mins, $secs]
+    );
+    	return true;
+  	}
+	add($mins, $secs);	
+	*/
 	$sql = "update users set minutes=? where id=?;";
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($sql);
@@ -242,8 +253,8 @@ else{
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($sql);
 	$stmt->bind_param('ss',  $secs, $id);
-	$stmt->execute();																											
-  
+	$stmt->execute();
+	}
   	?>
 
 	<style>
