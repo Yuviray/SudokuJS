@@ -102,7 +102,7 @@ else{
 	<body>
 
 		<div class="menuBar">
-			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
+			<menuButton onclick="profileScript()" class="left"><?php echo $row["user_name"]; ?></menuButton>
 			<menuButton onclick="logoutScript()">Logout</menuButton>
 			<menuButton onclick="newGameScript()">16x16</menuButton>
 			<menuButton onclick="minesScript()">Minesweeper</menuButton>
@@ -126,6 +126,10 @@ else{
 			function minesScript()
 			{ 
 				window.location.assign('minesweeper.php');
+			}
+			function profileScript()
+			{ 
+				window.location.assign('profilePage.php');
 			}
 		</script>
 
