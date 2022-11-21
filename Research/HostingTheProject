@@ -1,0 +1,9 @@
+//Yuvanesh Rajamani jjd149
+// no code needs to be changed except for the login credentials
+// this is just to explain a little bit about how er are going to be hosting the website.
+
+The hosting service we will be using is infinityfree.com
+I have already made an account
+I have made a sql database on the hosting service and have run some test files to see if it works
+Setting up the database is done in the same as the way we set the database on out personal machines
+all that need to be done now is refactoring the project so that it runs smoothly on the hosting site.
