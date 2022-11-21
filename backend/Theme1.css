@@ -1,14 +1,17 @@
-.sudoku-board {
+.sudoku-board
+{
     min-height: 30rem;
     margin-bottom: 1em;
 }
 
-body{
+body
+{
     background-image: linear-gradient(to right top, #65dfc9, #6cdbeb);
     height: 100vh;
 }
 /*cell (wrapper) contains both cell input and candidates div*/
-.sudoku-board-cell {
+.sudoku-board-cell
+{
     display: inline-block;
     position: relative;
     border: 1px solid #334747;
@@ -18,21 +21,28 @@ body{
 /*rules for drawing the black lines dividing houses
     -- specific for board size 9! need diff rules for diff board sizes
 */
-[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(9n+1){
+[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(9n+1)
+{
     border-left-width: 5px;
     border-left-color: #334747;
 }
-[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+9){
+
+[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+9)
+{
     border-top-width: 5px;
     border-top-color: #334747;
 }
-[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(3n){
+
+[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(3n)
+{
     border-right-width: 5px;
     border-right-color: #334747;
 }
+
 [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+19):nth-of-type(-n+27),
 [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+46):nth-of-type(-n+54),
-[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+73):nth-of-type(-n+81){
+[data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+73):nth-of-type(-n+81)
+{
     border-bottom-width: 5px;
     border-bottom-color: #334747;
 }

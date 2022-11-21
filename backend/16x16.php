@@ -19,17 +19,21 @@ else{
 		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
+
 		<style>
-			* {
-				margin:0; padding:0;
-				-moz-box-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-			}
-      .sudoku-board-cell input {
+			
+		* {
+			margin:0; padding:0;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+      	.sudoku-board-cell input
+		{
   			background: none;
   			font-size: 16px;
-      }
+      	}
 
 			.wrap {
 				padding: 2em 1em;
@@ -45,22 +49,29 @@ else{
 				}
 			}
 
-      [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(16n+1){
+      	[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(16n+1)
+		{
   			border-left-width: 5px;
   			border-left-color: #334747;
   		}
-  		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+16){
+
+  		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+16)
+		{
   			border-top-width: 5px;
   			border-top-color: #334747;
   		}
-  		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(4n){
+
+  		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(4n)
+		{
   			border-right-width: 5px;
   			border-right-color: #334747;
   		}
+
   		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+49):nth-of-type(-n+64),
   		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+113):nth-of-type(-n+128),
   		[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+177):nth-of-type(-n+192),
-      [data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+241):nth-of-type(-n+265){
+      	[data-board-size="16"].sudoku-board .sudoku-board-cell:nth-of-type(n+241):nth-of-type(-n+265)
+		{
   			border-bottom-width: 5px;
   			border-bottom-color: #334747;
   		}
