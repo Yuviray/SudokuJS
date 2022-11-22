@@ -107,6 +107,7 @@ else{
 			<menuButton onclick="logoutScript()">Logout</menuButton>
 			<menuButton onclick="newGameScript()">16x16</menuButton>
 			<menuButton onclick="minesScript()">Minesweeper</menuButton>
+			<menuButton onclick="snakeScript()">Snake</menuButton>
 
 			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
@@ -131,7 +132,14 @@ else{
 			function profileScript()
 			{ 
 				window.location.assign('profilePage.php');
+
 			}
+			function snakeScript()
+			{ 
+				window.location.assign('snakegame.html');
+
+			}
+			
 		</script>
 
 		<!-- This is the whole tutorial button in html -->
