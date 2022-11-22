@@ -20,6 +20,7 @@ else{
 		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
 		<link id=FallTheme rel="stylesheet" type="text/css" href="FallTheme.css">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
+		<link rel="stylesheet" media="all" type="text/css" href="leaderboard.css">
 
 		<style>
 			* {
@@ -261,51 +262,11 @@ else{
 	}
   	?>
 
-	<style>
-		.content-table{
-
-			border-collapse: collapse;
-			margin: 25px 0;
-			font-size: 0.9em;
-			min-width: 400px;
-			border-radius: 5px 5px 0 0;
-			overflow: hidden;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-		}
-
-		.content-table thread tr{
-
-			background-color: #009879 ;
-			color: #ffffff;
-			text-align: left;
-			font-weight: bold;
-		}
-
-		.content-table th,
-		.content-table td{
-
-			padding: 12px 15px;
-		}
-
-		.content-table tbody tr{
-			border-bottom: 1px solid #dddddd;
-
-		}
-
-		.content-table tbody tr:nth-of-type(even){
-			background-color: #f3f3f3;
-
-		}
-
-		.content-table tbody tr:last-of-type{
-			border-bottom: 2px solid #009879
-
-		}
-
-
-	</style>
-	<h2>Leaderboard: </h2>
-        <table class="content-table">
+	<div id = "parents">
+	<div id= "wides" class = "wrap">
+	<div id="narrows">
+		<h1 class = "h1">Leaderboard: </h1>
+        			<table class="container">
             <tr>
                 <td>Ranking</td>
                 <td>UserName</td>
@@ -334,7 +295,10 @@ else{
 	  			}
   			}
   			?>
-		</table>
+				</table>
+		</div>
+	</div>
+	</div>
 	</div>
 
 	

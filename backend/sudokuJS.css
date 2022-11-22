@@ -130,7 +130,7 @@
   text-transform: uppercase;
 }
 
-#container {
+.container {
   width: 600px;
   height: auto;
   background-color: white;
@@ -139,41 +139,33 @@
   border: 2px solid#808080;
 }
 
-.row {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 45px;
-  border-bottom: 1px solid black;
+.container thread tr{
+
+	background-color: #009879 ;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
 }
 
-.name {
-    margin-left: 20px;
-  position: relative;
-  display: inline-block;
-  width: 70%;
-  line-height: 45px;
+.container th,
+.container td{
+
+	padding: 12px 15px;
 }
 
-.score {
-  position: relative;
-  display: inline-block;
-  width: 25%;
+.container tbody tr{
+	border-bottom: 1px solid #dddddd;
+
 }
 
-.row:nth-child(2) {
-  background-color: rgba(0,0,0, 0.5);
-  color: gold;
+.container tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+
 }
 
-.row:nth-child(3) {
-  background-color: rgba(0,0,0, 0.4);
-  color: silver;
-}
+.container tbody tr:last-of-type{
+	border-bottom: 2px solid #009879
 
-.row:nth-child(4) {
-  background-color: rgba(0,0,0, 0.3);
-  color: bronze;
 }
 
 .timer{
