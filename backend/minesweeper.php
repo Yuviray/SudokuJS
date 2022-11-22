@@ -153,10 +153,12 @@ else{
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script type="text/javascript" src="sudokuJS.js"></script>
 
+		<div class="container2">
+		<div id="contentframe" style="position:relative; bottom: 450px; right: 450px;">
 		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5RrwGzV0r4Ob2MyocYxvBw?utm_source=generator"
-		 width="25%" height="200" frameBorder="0" 
+		 width="25%" height="400" frameBorder="0" 
 		 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-	
+		 </div>
 		<!-- Change Themes and Buttons -->
 
 	</body>
