@@ -19,6 +19,7 @@ else{
 		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
 		<link id=FallTheme rel="stylesheet" type="text/css" href="FallTheme.css">
+		<link id=prefTheme rel="stylesheet" type="text/css" href="<?php echo $row["prefTheme"]; ?>">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
 		<link rel="stylesheet" media="all" type="text/css" href="leaderboard.css">
 
@@ -135,9 +136,14 @@ else{
 			<menuButton onclick="logoutScript()">Logout</menuButton>
 			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
-			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
-			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
-			<button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
+			<div class="dropdown">
+				<button class ="button-54">Themes</button>
+				<div class = "dropdown-content">
+				<a onclick="useTheme1()">Theme 1</a>
+				<a onclick="useTheme2()">Theme 2</a>
+				<a onclick="useFallTheme()">Fall Theme</a>
+				</div>
+			</div>
 
 			<div class="dropdown">
 				<button class ="button-54">More Games</button>
@@ -201,6 +207,7 @@ else{
 		<script class="activate-A-Theme">
 			function useTheme1()
 			{
+				document.getElementById('prefTheme').disabled  = true;
 			document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = false;
@@ -208,6 +215,7 @@ else{
 
 			function useTheme2()
 			{
+				document.getElementById('prefTheme').disabled  = true;
 			document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = false;
 			document.getElementById('theme1').disabled = true;
@@ -215,6 +223,7 @@ else{
 
 			function useFallTheme()
 			{
+				document.getElementById('prefTheme').disabled  = true;
 			document.getElementById('FallTheme').disabled  = false;
 			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = true;
@@ -272,7 +281,8 @@ else{
 		<!--backend php code that updates table if new score if greater-->
 		<?php
 			error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
-		
+			error_reporting(E_ALL ^ E_NOTICE);
+
 			$mins = intval($_GET["w1"]);
 			$secs = intval($_GET["w2"]);
 			if($secs > 0){
@@ -389,4 +399,11 @@ else{
 
 
 	</body>
+
+	<script>
+		document.getElementById('FallTheme').disabled  = true;
+		document.getElementById('theme2').disabled  = true;
+		document.getElementById('theme1').disabled = true;
+	</script>
+
 </html>

@@ -122,6 +122,7 @@
     <body>
 
     <div class="center">
+
         <form class="" action="" method="post" autocomplete="off">
 
                 <h1><?php echo $row["user_name"];?>'s Profile</h1>
@@ -146,6 +147,36 @@
                 <p>Minutes: <b><?php echo $row["minutes"];?></b><br></p>
                 <p>Seconds: <b><?php echo $row["seconds"];?></b><br></p>
                 <p class="mb-5"> </p>
+
+                <h3 class="text-black">Set Prefered Theme: <br></h3>
+                <button type="submit" name="theme1" class="button" value="theme1" onclick="themeSetAlert()">Theme 1</button>
+		        <button type="submit" name="theme2" class="button" value="theme2" onclick="themeSetAlert()">Theme 2</button>
+		        <button type="submit" name="theme3" class="button" value="theme3" onclick="themeSetAlert()">Fall Theme</button>
+
+                <?php
+                    if(array_key_exists('theme1', $_POST))
+                    { 
+                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='theme1.css' WHERE id = $id");
+                    }
+
+                    if(array_key_exists('theme2', $_POST))
+                    {
+                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='theme2.css' WHERE id = $id");
+                    }
+
+                    if(array_key_exists('theme3', $_POST))
+                    {
+                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='FallTheme.css' WHERE id = $id");
+                    }
+                ?>
+                <script>
+                    function themeSetAlert()
+                    {
+                        alert("Your preferred Theme has been set!");
+                    }
+                </script>
+
+                <br><br>
 
                 <!-- <a href="#!" class="btn btn-info">Edit profile</a> //-->
                 <b href="#!" class="btn btn-info" onclick="backToIndexScript()">Return to Game<br></b>
