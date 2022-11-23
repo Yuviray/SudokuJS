@@ -1,6 +1,7 @@
 <?php
 namespace Tester;
 require 'config.php';
+
 if(!empty($_SESSION["id"])){
   $id = $_SESSION["id"];
   $result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
@@ -18,6 +19,7 @@ else{
 		<link id=FallTheme rel="stylesheet" type="text/css" href="FallTheme.css">
 		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
+		<link id=prefTheme rel="stylesheet" type="text/css" href="<?php echo $row["prefTheme"]; ?>">
 		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
 
 		<style>
@@ -29,11 +31,20 @@ else{
 			box-sizing: border-box;
 		}
 
+		.sudoku-board-cell
+		{
+			display: inline-block;
+			position: relative;
+			border: 1px solid #334747;
+			max-width: 6.5%;
+		}
+
       	.sudoku-board-cell input
 		{
   			background: none;
   			font-size: 16px;
       	}
+		
 
 			.wrap {
 				padding: 2em 1em;
@@ -132,6 +143,7 @@ else{
 				display: block;
 			}
 			.dropdown-content a{
+				background-color: grey;
 				display: block;
 				color: white;
 				padding: 5px;
@@ -154,14 +166,20 @@ else{
 
 	<body>
 	<div class="menuBar">
-			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
+			<menuButton onclick="profileScript()" class="left"><?php echo $row["user_name"]; ?></menuButton>
 			<menuButton onclick="logoutScript()">Logout</menuButton>
 
 			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
-			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
-			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
-			<button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
+			<div class="dropdown">
+				<button class ="button-54">Themes</button>
+				<div class = "dropdown-content">
+				<a onclick="useTheme1()">Theme 1</a>
+				<a onclick="useTheme2()">Theme 2</a>
+				<a onclick="useFallTheme()">Fall Theme</a>
+				</div>
+			</div>
+
 			<div class="dropdown">
 				<button class ="button-54">More Games</button>
 				<div class = "dropdown-content">
@@ -185,6 +203,10 @@ else{
 			function minesScript()
 			{ 
 				window.location.assign('minesweeper.php');
+			}
+			function profileScript()
+			{ 
+				window.location.assign('profilePage.php');
 			}
 		</script>
 
@@ -212,6 +234,7 @@ else{
 		<script class="activate-A-Theme">
 			function useTheme1()
 			{
+				document.getElementById('prefTheme').disabled  = true;
 			document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = false;
@@ -219,6 +242,7 @@ else{
 
 			function useTheme2()
 			{
+				document.getElementById('prefTheme').disabled  = true;
 			document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = false;
 			document.getElementById('theme1').disabled = true;
@@ -226,6 +250,7 @@ else{
 
 			function useFallTheme()
 			{
+				document.getElementById('prefTheme').disabled  = true;
 			document.getElementById('FallTheme').disabled  = false;
 			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = true;
@@ -254,6 +279,8 @@ else{
 	<!--backend php code that updates table if new score if greater-->
 <?php
 	error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
+	error_reporting(E_ALL ^ E_NOTICE);
+
 	if(isset($_GET["w1"]) && isset($_GET["w2"])){
 		$mins = intval($_GET["w1"]);
 		$secs = intval($_GET["w2"]);
@@ -369,4 +396,11 @@ else{
     retryForever(tryGeneratingBoard)
 	</script>
 	</body>
+
+	<script>
+		document.getElementById('FallTheme').disabled  = true;
+		document.getElementById('theme2').disabled  = true;
+		document.getElementById('theme1').disabled = true;
+	</script>
+
 </html>
