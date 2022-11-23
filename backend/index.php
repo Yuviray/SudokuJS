@@ -54,13 +54,14 @@ else{
 			.menuBar 
 			{
 				background-color: #111;
-				overflow: hidden;
+				overflow: visible;
 				position: relative;
 				top: 0;
 				width: 100%;
 				border: 10px;
 				min-width: 100%;
 				user-select: none;
+				block-size: 40px;
 			}
   
 			.menuBar menuButton
@@ -90,6 +91,33 @@ else{
 			}
 
 			/* ---- Menu Bar Styling ---- */
+			.dropdown {
+  				display: inline-block;
+  				position: relative;
+				z-index:1;
+			}		
+			.dropdown-content{
+				display: none;
+				position: absolute;
+				width: 100%;
+				overflow: auto;
+				bow-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			}
+			.dropdown:hover .dropdown-content{
+				display: block;
+			}
+			.dropdown-content a{
+				background-color: grey;
+				display: block;
+				color: white;
+				padding: 5px;
+				text-decoration: none;
+			}
+			.dropdown-content a:hover{
+				color : white;
+				background-color: #00a4bd;
+			}
+
 		</style>
 
 		<title>Sudoku Plus Demo</title>
@@ -105,15 +133,21 @@ else{
 		<div class="menuBar">
 			<menuButton onclick="profileScript()" class="left"><?php echo $row["user_name"]; ?></menuButton>
 			<menuButton onclick="logoutScript()">Logout</menuButton>
-			<menuButton onclick="newGameScript()">16x16</menuButton>
-			<menuButton onclick="minesScript()">Minesweeper</menuButton>
-			<menuButton onclick="snakeScript()">Snake</menuButton>
-
 			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
 			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
 			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
 			<button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
+
+			<div class="dropdown">
+				<button class ="button-54">More Games</button>
+				<div class = "dropdown-content">
+				<a onclick="newGameScript()">16x16</a>
+				<a onclick="minesScript()">Minesweeper</a>
+				<a onclick="snakeScript()">Snake</a>
+				</div>
+			</div>
+
 		</div>
 
 		<script> 
@@ -234,45 +268,44 @@ else{
 		<br><br>
 		<!--clear board btn-->
 		</h2><button type="button" class="js-clear-board-btn">Clear Board</button>
-	</div>
-<!--backend php code that updates table if new score if greater-->
-<?php
-	error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
-	
-	$mins = intval($_GET["w1"]);
-	$secs = intval($_GET["w2"]);
-	if($secs > 0){
-  	$id = $_SESSION["id"];
-  	$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
-	$row = mysqli_fetch_assoc($result);
-	
 
-	/*function add ($mins, $secs) {
-    $this->query(
-      "INSERT INTO `user` ('minutes', 'seconds') VALUES($mins,$secs)",
-      [$mins, $secs]
-    );
-    	return true;
-  	}
-	add($mins, $secs);	
-	*/
-	$sql = "update users set minutes=? where id=?;";
-	$stmt = $conn->stmt_init();
-	$stmt->prepare($sql);
-	$stmt->bind_param('ss',  $mins, $id);
-	$stmt->execute();
+		<!--backend php code that updates table if new score if greater-->
+		<?php
+			error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
+		
+			$mins = intval($_GET["w1"]);
+			$secs = intval($_GET["w2"]);
+			if($secs > 0){
+			$id = $_SESSION["id"];
+			$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
+			$row = mysqli_fetch_assoc($result);
+			
 
-	$sql = "update users set seconds=? where id=?;";
-	$stmt = $conn->stmt_init();
-	$stmt->prepare($sql);
-	$stmt->bind_param('ss',  $secs, $id);
-	$stmt->execute();
-	}
-  	?>
+			/*function add ($mins, $secs) {
+			$this->query(
+			"INSERT INTO `user` ('minutes', 'seconds') VALUES($mins,$secs)",
+			[$mins, $secs]
+			);
+				return true;
+			}
+			add($mins, $secs);	
+			*/
+			$sql = "update users set minutes=? where id=?;";
+			$stmt = $conn->stmt_init();
+			$stmt->prepare($sql);
+			$stmt->bind_param('ss',  $mins, $id);
+			$stmt->execute();
 
-	<div id = "parents">
-	<div id= "wides" class = "wrap">
-	<div id="narrows">
+			$sql = "update users set seconds=? where id=?;";
+			$stmt = $conn->stmt_init();
+			$stmt->prepare($sql);
+			$stmt->bind_param('ss',  $secs, $id);
+			$stmt->execute();
+			}
+		?>
+		<div id = "parents">
+		<div id= "wides" class = "wrap">
+		<div id="narrows">
 		<h1 class = "h1">Leaderboard: </h1>
         			<table class="container">
             <tr>
@@ -307,8 +340,6 @@ else{
 		</div>
 	</div>
 	</div>
-	</div>
-
 	
 
 	<script>

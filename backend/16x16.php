@@ -79,13 +79,14 @@ else{
 		.menuBar 
 			{
 				background-color: #111;
-				overflow: hidden;
+				overflow: visible;
 				position: relative;
 				top: 0;
 				width: 100%;
 				border: 10px;
 				min-width: 100%;
 				user-select: none;
+				block-size: 40px;
 			}
   
 			.menuBar menuButton
@@ -115,6 +116,31 @@ else{
 			}
 
 			/* ---- Menu Bar Styling ---- */
+			.dropdown {
+  				display: inline-block;
+  				position: relative;
+				z-index:1;
+			}		
+			.dropdown-content{
+				display: none;
+				position: absolute;
+				width: 100%;
+				overflow: auto;
+				bow-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			}
+			.dropdown:hover .dropdown-content{
+				display: block;
+			}
+			.dropdown-content a{
+				display: block;
+				color: white;
+				padding: 5px;
+				text-decoration: none;
+			}
+			.dropdown-content a:hover{
+				color : white;
+				background-color: #00a4bd;
+			}
 
 		</style>
 
@@ -130,14 +156,21 @@ else{
 	<div class="menuBar">
 			<menuButton class="left"><?php echo $row["user_name"]; ?></menuButton>
 			<menuButton onclick="logoutScript()">Logout</menuButton>
-			<menuButton onclick="oldGameScript()">Normal</menuButton>
-			<menuButton onclick="minesScript()">Minesweeper</menuButton>
 
 			<button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
 			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
 			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
 			<button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
+			<div class="dropdown">
+				<button class ="button-54">More Games</button>
+				<div class = "dropdown-content">
+				<a onclick="oldGameScript()">Normal</a>
+				<a onclick="minesScript()">Minesweeper</a>
+				<a onclick="snakeScript()">Snake</a>
+				</div>
+			</div>
+
 		</div>
 
 		<script> 
