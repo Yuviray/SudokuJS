@@ -41,7 +41,7 @@ if(isset($_POST["submit"])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" type="text/css" href="Frontedstyle.css">
+    <link rel="stylesheet" media="all" type="text/css" href="../frontend/Frontedstyle.css">
     <title>Registration</title>
   </head>
   <body>
