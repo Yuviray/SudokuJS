@@ -20,8 +20,8 @@
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
             <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-            <link id=theme1 rel="stylesheet" type="text/css" href="Theme2.css">
-            <link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
+            <link id=theme1 rel="stylesheet" type="text/css" href="../frontend/Theme2.css">
+            <link rel="stylesheet" media="all" type="text/css" href="../frontend/tutorial.css">
 
         <style>
 

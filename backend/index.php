@@ -16,12 +16,12 @@ else{
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-		<link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
-		<link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
-		<link id=FallTheme rel="stylesheet" type="text/css" href="FallTheme.css">
+		<link id=theme2 rel="stylesheet" type="text/css" href="../frontend/Theme2.css">
+		<link id=theme1 rel="stylesheet" type="text/css" href="../frontend/Theme1.css">
+		<link id=FallTheme rel="stylesheet" type="text/css" href="../frontend/FallTheme.css">
 		<link id=prefTheme rel="stylesheet" type="text/css" href="<?php echo $row["prefTheme"]; ?>">
-		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
-		<link rel="stylesheet" media="all" type="text/css" href="leaderboard.css">
+		<link rel="stylesheet" media="all" type="text/css" href="../frontend/tutorial.css">
+		<link rel="stylesheet" media="all" type="text/css" href="../frontend/leaderboard.css">
 
 		<style>
 			* {
@@ -126,7 +126,7 @@ else{
 		
 		<script defer src="tutorial.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script type="text/javascript" src="sudokuJS.js"></script>
+		<script type="text/javascript" src="../frontend/sudokuJS.js"></script>
 	</head>
 
 	<body>

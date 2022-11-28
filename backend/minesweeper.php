@@ -18,8 +18,8 @@ else{
 		<link id=FallTheme rel="stylesheet" type="text/css" href="../frontend/FallThemeMines.css">
 		<link id=theme2 rel="stylesheet" type="text/css" href="../frontend/Theme2Mines.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="../frontend/Theme1Mines.css">
-		<link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
-        <script src="mines.js" charset="utf-8"></script>
+		<link rel="stylesheet" media="all" type="text/css" href="../frontend/tutorial.css">
+        <script src="../frontend/mines.js" charset="utf-8"></script>
         
 		<style>
 
@@ -106,7 +106,7 @@ else{
 
 			<button class="button-54" onclick="useTheme1()"> Theme 1 </button>
 			<button class="button-54" onclick="useTheme2()"> Theme 2 </button>
-			<button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
+			<!--<button class="button-54" onclick="useFallTheme()"> Fall Theme </button> -->
 			<div class="dropdown">
 				<button class ="button-54">More Games</button>
 				<div class = "dropdown-content">
@@ -127,9 +127,13 @@ else{
 			{ 
 				window.location.assign('index.php');
 			}
-            function SuperSudokuScript()
+            function newGameScript()
 			{ 
 				window.location.assign('16x16.php');
+			}
+			function snakeScript()
+			{ 
+				window.location.assign('snakegame.html');
 			}
 		</script>	
         <div class="modal" id = "modal">
@@ -184,15 +188,15 @@ else{
         </div>
         <script defer src="tutorial.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script type="text/javascript" src="sudokuJS.js"></script>
+		<script type="text/javascript" src="../frontend/sudokuJS.js"></script>
 
 		<div class="container2">
 		<div id="contentframe" style="position:relative; bottom: 450px; right: 450px;">
-		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5RrwGzV0r4Ob2MyocYxvBw?utm_source=generator"
+		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWUqIzZNMSCv3?utm_source=generator&theme=0"
 		 width="25%" height="400" frameBorder="0" 
 		 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		 </div>
 		<!-- Change Themes and Buttons -->
-
+		
 	</body>
 </html>
