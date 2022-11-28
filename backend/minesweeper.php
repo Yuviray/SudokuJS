@@ -186,16 +186,21 @@ else{
             <div>Flags left: <span id='flags-left'></span></div>
             <div id="result"></div>
         </div>
-        <script defer src="tutorial.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script type="text/javascript" src="../frontend/sudokuJS.js"></script>
 
-		<div class="container2">
-		<div id="contentframe" style="position:relative; bottom: 450px; right: 450px;">
-		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWUqIzZNMSCv3?utm_source=generator&theme=0"
-		 width="25%" height="400" frameBorder="0" 
-		 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-		 </div>
+		<div class="container1">
+				<div id="contentframe" style="position:relative; bottom: 460px; right: 550px;">
+				<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWUqIzZNMSCv3?utm_source=generator&theme=0"
+				 width="60%" height="300" frameBorder="0" 
+				 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		</div>
+
+		<script>
+        	<script defer src="tutorial.js"></script>
+        	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+			<script type="text/javascript" src="../frontend/sudokuJS.js"></script>
+		</script>
+
+		
 		<!-- Change Themes and Buttons -->
 		
 	</body>
