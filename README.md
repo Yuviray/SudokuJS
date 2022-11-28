@@ -207,6 +207,30 @@ Provide various use cases and code examples here.
     * Add functionality to the Profile button for user to see score and details (Profile Page)
     * Refactor our current styling method to make it easier to add Themes
 
+### Sprint 3 Ended 11/28/2022
+
+- Yuvanesh Rajamani: 
+    * SP1-43: Add new game related to logic puzzles: 
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-43
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/SP1-43-add-new-game-related-to-logic-puz
+    * SP1-44:Add extra security to the backend such as hashing and input validation.: 
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-44
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/feature/SP1-44-add-extra-security-to-the-backend
+    * SP1-42: Host project and database on server: 
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-42
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/SP1-42-host-project-and-database-on-serv
+    * SP1-59:clean up entire project: 
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-59
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/bugfix/SP1-59-clean-up-entire-project
+
+### Sprint 4 ideas
+
+- Yuvanesh Rajamani: 
+    * I think change the backend to using express and mongodb or another nosql data base would be best
+    * Theres a lot of bugs as is right now so a priority for the next sprint would be fix that
+    * make the user experience for professional feeling
+    * add more games
+    * store more game data in the server
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
