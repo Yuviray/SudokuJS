@@ -281,29 +281,7 @@ else{
 		</h2><button type="button" class="js-clear-board-btn">Clear Board</button>
 	</div>
 	<!--backend php code that updates table if new score if greater-->
-<?php
-	error_reporting(E_ALL ^ E_WARNING); //Disables Warnings
-	error_reporting(E_ALL ^ E_NOTICE);
 
-	if(isset($_GET["w1"]) && isset($_GET["w2"])){
-		$mins = intval($_GET["w1"]);
-		$secs = intval($_GET["w2"]);
-  		$id = $_SESSION["id"];
-  		$result = mysqli_query($conn, "SELECT * FROM users WHERE id = $id");
-		$row = mysqli_fetch_assoc($result);
-	}
-	$sql = "update users set minutes=? where id=?;";
-	$stmt = $conn->stmt_init();
-	$stmt->prepare($sql);
-	$stmt->bind_param('ss',  $mins, $id);
-	$stmt->execute();
-	$sql = "update users set seconds=? where id=?;";
-	$stmt = $conn->stmt_init();
-	$stmt->prepare($sql);
-	$stmt->bind_param('ss',  $secs, $id);
-	$stmt->execute();																											
-  
-  	?>
 	<style>
 		.content-table{
 
@@ -347,38 +325,7 @@ else{
 
 
 	</style>
-	<h2>Leaderboard: </h2>
-        <table class="content-table">
-            <tr>
-                <td>Ranking</td>
-                <td>UserName</td>
-                <td>Times</td>
-            </tr>
-
-			<!--displays the rankings in order-->
-
-			<?php
-  			/* Mysqli query to fetch rows 
-  			in descending order of marks */
-			$result = mysqli_query($conn, "SELECT user_name, 
-  				minutes, seconds FROM users ORDER BY minutes, seconds ASC");
 	
-  			/* First rank will be 1 and 
-	  		second be 2 and so on */
-  			$ranking = 1;
-	
-  			/* Fetch Rows from the SQL query */
-  			if (mysqli_num_rows($result)) {
-	  			while ($row = mysqli_fetch_array($result)) {// code the prints ranking will need inline css
-		  			echo "<tr><td>{$ranking}</td> 
-		  			<td>{$row['user_name']}</td>
-		  			<td>{$row['minutes']}:{$row['seconds']}s</td></tr>";
-		  			$ranking++;
-	  			}
-  			}
-  			?>
-		</table>
-
 	<script>
     function retryForever (fn) {
       try {
