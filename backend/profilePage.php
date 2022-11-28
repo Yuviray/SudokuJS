@@ -156,17 +156,17 @@
                 <?php
                     if(array_key_exists('theme1', $_POST))
                     { 
-                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='theme1.css' WHERE id = $id");
+                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='../frontend/Theme1.css' WHERE id = $id");
                     }
 
                     if(array_key_exists('theme2', $_POST))
                     {
-                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='theme2.css' WHERE id = $id");
+                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='../frontend/Theme2.css' WHERE id = $id");
                     }
 
                     if(array_key_exists('theme3', $_POST))
                     {
-                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='FallTheme.css' WHERE id = $id");
+                        $result = mysqli_query($conn, "UPDATE users SET prefTheme='../frontend/FallTheme.css' WHERE id = $id");
                     }
                 ?>
                 <script>

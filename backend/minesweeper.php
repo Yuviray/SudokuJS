@@ -15,7 +15,6 @@ else{
 		<meta charset="utf-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-		<link id=FallTheme rel="stylesheet" type="text/css" href="../frontend/FallThemeMines.css">
 		<link id=theme2 rel="stylesheet" type="text/css" href="../frontend/Theme2Mines.css">
 		<link id=theme1 rel="stylesheet" type="text/css" href="../frontend/Theme1Mines.css">
 		<link rel="stylesheet" media="all" type="text/css" href="../frontend/tutorial.css">
@@ -136,47 +135,25 @@ else{
 				window.location.assign('snakegame.html');
 			}
 		</script>	
-        <div class="modal" id = "modal">
-			<div class ="modal-header">
-				<div class="title">Minesweeper Tutorial</div>
-				<button data-close-button class="close-button">&times;</button>
-			</div>
-			<div class = "modal-body">
-				This will help you understand how to play the popular game Minesweeper!
-				This game will be played on a 10x10 grid and there are 20 Bombs on the grid.
-				<div class = "modal-ul">
-					<ul>
-						<li>Click on a Bomb and your dead</li>
-						<li>Numbers represent the amount of Bombs surrounding </li>
-					</ul>
-				</div>
-				To start solving click on a square and input the number that you think is correct.
-				If the number is wrong the square will light up red, and blue if correct.
-			</div>
-		</div>
+  
         
 		<!-- Change Themes and Buttons -->
 		<script class="activate-A-Theme">
 			function useTheme1()
 			{
-			document.getElementById('FallTheme').disabled  = true;
+		//	document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = true;
 			document.getElementById('theme1').disabled = false;
 			}
 
 			function useTheme2()
 			{
-			document.getElementById('FallTheme').disabled  = true;
+			//document.getElementById('FallTheme').disabled  = true;
 			document.getElementById('theme2').disabled  = false;
 			document.getElementById('theme1').disabled = true;
 			}
 
-			function useFallTheme()
-			{
-			document.getElementById('FallTheme').disabled  = false;
-			document.getElementById('theme2').disabled  = true;
-			document.getElementById('theme1').disabled = true;
-			}
+		
 		</script>
 		
 		<br><br>
@@ -194,12 +171,7 @@ else{
 				 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		</div>
 
-		<script>
-        	<script defer src="tutorial.js"></script>
-        	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-			<script type="text/javascript" src="../frontend/sudokuJS.js"></script>
-		</script>
-
+	
 		
 		<!-- Change Themes and Buttons -->
 		
