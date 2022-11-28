@@ -313,6 +313,8 @@ else{
 			$stmt->execute();
 			}
 		?>
+
+		
 		<div id = "parents">
 		<div id= "wides" class = "wrap">
 		<div id="narrows">
@@ -412,5 +414,5 @@ else{
 		 width="70%" height="300" frameBorder="0" 
 		 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 	</div>
-
+	
 </html>

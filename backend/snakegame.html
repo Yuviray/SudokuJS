@@ -34,11 +34,11 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-  <link id=theme2 rel="stylesheet" type="text/css" href="Theme2.css">
-  <link id=theme1 rel="stylesheet" type="text/css" href="Theme1.css">
-  <link id=FallTheme rel="stylesheet" type="text/css" href="FallTheme.css">
-  <link rel="stylesheet" media="all" type="text/css" href="tutorial.css">
-  <link rel="stylesheet" media="all" type="text/css" href="leaderboard.css">
+  <link id=theme2 rel="stylesheet" type="text/css" href="../frontend/Theme2.css">
+  <link id=theme1 rel="stylesheet" type="text/css" href="../frontend/Theme1.css">
+  
+  <link rel="stylesheet" media="all" type="text/css" href="../frontend/tutorial.css">
+  <link rel="stylesheet" media="all" type="text/css" href="../frontend/leaderboard.css">
 
   <style>
     * {
@@ -112,12 +112,6 @@
 
   <title>Sudoku Plus Demo</title>
 
-  
-  <script defer src="tutorial.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-  <script type="text/javascript" src="sudokuJS.js"></script>
-</head>
-
 <body>
 
   <div class="menuBar">
@@ -127,11 +121,10 @@
     <menuButton onclick="minesScript()">Minesweeper</menuButton>
     <menuButton onclick="snakeScript()">Snake</menuButton>
 
-    <button class = "button-54" data-modal-target="#modal"> Tutorial </button>
 
     <button class="button-54" onclick="useTheme1()"> Theme 1 </button>
     <button class="button-54" onclick="useTheme2()"> Theme 2 </button>
-    <button class="button-54" onclick="useFallTheme()"> Fall Theme </button>
+   <!-- <button class="button-54" onclick="useFallTheme()"> Fall Theme </button>-->
   </div>
 
   <script> 
@@ -162,47 +155,30 @@
 
   <!-- This is the whole tutorial button in html -->
 
-  <div class="modal" id = "modal">
-    <div class ="modal-header">
-      <div class="title">Sudoku Tutorial</div>
-      <button data-close-button class="close-button">&times;</button>
-    </div>
-    <div class = "modal-body">
-      This will help you understand how to play the popular game Sudoku!
-      Sudoku is a game played on a grid of 9x9 spaces.
-      <div class = "modal-ul">
-        <ul>
-          <li>Each row, column, and square has to have the numbers 1 through 9.</li>
-          <li>None of the numbers can repeat</li>
-        </ul>
-      </div>
-      To start solving click on a square and input the number that you think is correct.
-      If the number is wrong the square will light up red, and blue if correct.
-    </div>
-  </div>
+ 
 
   <!-- Change Themes and Buttons -->
   <script class="activate-A-Theme">
     function useTheme1()
     {
-    document.getElementById('FallTheme').disabled  = true;
+   // document.getElementById('FallTheme').disabled  = true;
     document.getElementById('theme2').disabled  = true;
     document.getElementById('theme1').disabled = false;
     }
 
     function useTheme2()
     {
-    document.getElementById('FallTheme').disabled  = true;
+  //  document.getElementById('FallTheme').disabled  = true;
     document.getElementById('theme2').disabled  = false;
     document.getElementById('theme1').disabled = true;
     }
-
+/*
     function useFallTheme()
     {
     document.getElementById('FallTheme').disabled  = false;
     document.getElementById('theme2').disabled  = true;
     document.getElementById('theme1').disabled = true;
-    }
+    }*/
   </script>
   </body>
 
