@@ -222,6 +222,16 @@ Provide various use cases and code examples here.
     * SP1-59:clean up entire project: 
         * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-59
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/bugfix/SP1-59-clean-up-entire-project
+- Nico  Maldonado
+    * SP1-45 : Fixed the bug for user scores not saving:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/f071bb43a9aa352d991b681ca7c085f80aef50f5
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-45?atlOrigin=eyJpIjoiNTVmYmY0ZjgzZjBjNDdjMDg0YjEzNDVlZmM4Mzk3OTYiLCJwIjoiaiJ9
+    * SP1-46 : Refactor leaderboard for user interface:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/45bdb8d18db0bbd8ca694e40784810e431395d1b
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-46?atlOrigin=eyJpIjoiNjExYTVjZmNiZjIzNDJlNWI1NmYzOTIwN2YxMTg1NmYiLCJwIjoiaiJ9
+    * SP1-47 : Create drop down menu for all games on website:
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/089731456a0bc3e4dbf57ee538537d0ce148ab1f
+        * https://cs3398f22betazoids.atlassian.net/browse/SP1-47?atlOrigin=eyJpIjoiNWVjYTAxOWZiMDU1NGZjZjg1MWIxODg2MTRlZDZjY2MiLCJwIjoiaiJ9
 
 ### Sprint 4 ideas
 
@@ -231,6 +241,10 @@ Provide various use cases and code examples here.
     * make the user experience for professional feeling
     * add more games
     * store more game data in the server
+- Nico Maldonado: 
+    * Create more leaderboards for the other games on the website
+    * Add different symbols for the sudoku board to use other than just numbers
+    * Add a profile picture option to the user profile
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
