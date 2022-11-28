@@ -406,4 +406,11 @@ else{
 		document.getElementById('theme1').disabled = true;
 	</script>
 
+	<div class="container2">
+		<div id="contentframe" style="position:relative; bottom: 665px; right: 450px;">
+		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWV7EzJMK2FUI?utm_source=generator"
+		 width="70%" height="300" frameBorder="0" 
+		 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	</div>
+
 </html>
