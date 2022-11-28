@@ -14,6 +14,7 @@ if(isset($_POST["submit"])){
   $confirmpassword = $_POST["r_pwd"];
   $minutes = 0;
   $seconds = 0;
+  $pref = "../frontend/Theme2.css";
   $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE user_name = '$username' OR email = '$email'");
   if(mysqli_num_rows($duplicate) > 0){
     echo
@@ -23,7 +24,7 @@ if(isset($_POST["submit"])){
     if($password == $confirmpassword){
       $password = password_hash($password, PASSWORD_DEFAULT);
       $confirmpassword = password_hash($confirmpassword, PASSWORD_DEFAULT);
-      $query = "INSERT INTO users VALUES('$test','$fname','$lname','$username','$email','$password', '$confirmpassword','$minutes', '$seconds')";
+      $query = "INSERT INTO users VALUES('$test','$fname','$lname','$username','$email','$password', '$confirmpassword','$minutes', '$seconds','$pref')";
       mysqli_query($conn, $query);
       echo
       "<script> alert('Registration Successful'); </script>";
@@ -82,7 +83,7 @@ if(isset($_POST["submit"])){
 
                 <button type="submit" name="submit">Register</button>
 
-                <button type = "submit" name="backtologin" onclick="backToLoginScript()";">Back to Login </button>
+                <button type = "submit" name="backtologin" onclick="backToLoginScript()";>Back to Login </button>
 
 
             </div>
