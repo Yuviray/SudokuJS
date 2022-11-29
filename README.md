@@ -242,7 +242,18 @@ Provide various use cases and code examples here.
     * SP1-49 : Fixed Bugs for Snake and Reformatted.
         * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-49 
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/SP1-49-reformat-snake-game-to-fit-the-re    
-
+- Alberto Veloso
+    * SP1-55 : Add a playlist to the website
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-55
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/ca22f7b568abb2614badf7da89d42467f3712d49
+    * SP1-31: Solve the Minesweeper bug
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-31
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/a446c99aca58d308464867ef607231c0b3c39f07
+    * SP1-32: Add and adjust playlist to the sudoku game
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-32
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/32ba20a4c6a427fa3d423e55bff8e4e7812a7f14
+        
+    
 ### Sprint 4 ideas
 
 - Yuvanesh Rajamani: 
@@ -259,6 +270,12 @@ Provide various use cases and code examples here.
     * add restart buttons 
     * make sure the formatting for all the website is uniform.
     * add a new game and make revisions to the rest. 
+    
+- Alberto Veloso:
+    * Solving the bugs regarding why the tutorial does not show up for some games
+    * Since the project has expanded a little possibly add a few more games
+    * Fix the 16x16 mode
+    * Maybe give the user the ability to create a personalized theme 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
