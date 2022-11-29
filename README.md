@@ -232,6 +232,16 @@ Provide various use cases and code examples here.
     * SP1-47 : Create drop down menu for all games on website:
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/089731456a0bc3e4dbf57ee538537d0ce148ab1f
         * https://cs3398f22betazoids.atlassian.net/browse/SP1-47?atlOrigin=eyJpIjoiNWVjYTAxOWZiMDU1NGZjZjg1MWIxODg2MTRlZDZjY2MiLCJwIjoiaiJ9
+- Waleed Naveed
+    * SP1-48 : Add new game - Snake.
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/SP1-48-snake-game
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-48
+    * SP1-56 Fixed Playlist and Position.
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/SP1-56-add-a-playlist-and-move-it
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-5
+    * SP1-49 : Fixed Bugs for Snake and Reformatted.
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-49 
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/branch/SP1-49-reformat-snake-game-to-fit-the-re    
 
 ### Sprint 4 ideas
 
@@ -245,6 +255,10 @@ Provide various use cases and code examples here.
     * Create more leaderboards for the other games on the website
     * Add different symbols for the sudoku board to use other than just numbers
     * Add a profile picture option to the user profile
+- Waleed Naveed:
+    * add restart buttons 
+    * make sure the formatting for all the website is uniform.
+    * add a new game and make revisions to the rest. 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
