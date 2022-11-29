@@ -78,8 +78,6 @@ I, Miguel,As a person who plays video games, I would like to make sure everyone 
 ![Sudoku image](https://upload.wikimedia.org/wikipedia/commons/f/ff/Sudoku-by-L2G-20050714.svg)
 
 
-
-
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
@@ -252,7 +250,13 @@ Provide various use cases and code examples here.
     * SP1-32: Add and adjust playlist to the sudoku game
         * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-32
         * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/32ba20a4c6a427fa3d423e55bff8e4e7812a7f14
-        
+- Miguel Vertiz
+    * SP1-30 : Create user profile page for menu bar
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-30
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/9b06ad9bcf7742b10c021a54d2d24e8e5b1a8ee1
+    * SP1-57: Allow user to set a preferred theme for themselves
+        * https://cs3398f22betazoids.atlassian.net/jira/software/projects/SP1/boards/2?selectedIssue=SP1-57
+        * https://bitbucket.org/cs3398f22betazoids/sudokujs/commits/61ba1b318bbff07db9f66b10bd58ffd13fd6fc2e   
     
 ### Sprint 4 ideas
 
@@ -270,12 +274,17 @@ Provide various use cases and code examples here.
     * add restart buttons 
     * make sure the formatting for all the website is uniform.
     * add a new game and make revisions to the rest. 
-    
 - Alberto Veloso:
     * Solving the bugs regarding why the tutorial does not show up for some games
     * Since the project has expanded a little possibly add a few more games
     * Fix the 16x16 mode
-    * Maybe give the user the ability to create a personalized theme 
+    * Maybe give the user the ability to create a personalized theme
+- Miguel Vertiz:
+    * Implement a uniform HTML header that can and should be used by all PHP/HTML files that are to be accessed
+        for a simple and non redundant solution for uniform styling that can be easily expanded upon.
+    * Have Access to the music player in all available sites.
+    * Refactor exsisting Theme files to utilize the soon to be uniformaly used HTML header stylings for
+        easier to maker future themes and make existing ones less bloated from duplicate code.
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
@@ -290,18 +299,9 @@ To do:
 - Feature to be added 1
 - Feature to be added 2
 
-
 ## Acknowledgements
-Give credit here.
--
-
 
 ## Contact
 
-
-
 <!-- Optional -->
 <!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
