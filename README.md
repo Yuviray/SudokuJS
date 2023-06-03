@@ -78,18 +78,6 @@ I, Miguel,As a person who plays video games, I would like to make sure everyone 
 ![Sudoku image](https://upload.wikimedia.org/wikipedia/commons/f/ff/Sudoku-by-L2G-20050714.svg)
 
 
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
 # Project Status
 ### Sprint 1 Ended 10/05/2022
 
@@ -295,13 +283,3 @@ Room for improvement:
 - Miguel Vertiz: 
     * I would like to find a way to implement our work to be accessible online.
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-## Acknowledgements
-
-## Contact
-
-<!-- Optional -->
-<!-- ## License -->
