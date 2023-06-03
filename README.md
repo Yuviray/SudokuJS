@@ -1,5 +1,4 @@
 # Sudoku Plus
-> Outline a brief description of your project.
 
 1. Alberto Veloso, Robert Maldonado, Yuvanesh Rajamani, Waleed Naveed, Miguel Vertiz.
 2. We are creating enhanced sudoku game with extra features.
@@ -18,14 +17,6 @@
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
-
-
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
@@ -274,12 +265,9 @@ I, Miguel,As a person who plays video games, I would like to make sure everyone 
     * Refactor exsisting Theme files to utilize the soon to be uniformaly used HTML header stylings for
         easier to maker future themes and make existing ones less bloated from duplicate code.
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
+## Room for Improvement:
 - Nico Maldonado: 
     * I would like to improve on communication with my teammates so that I can implement functions easier.
 - Miguel Vertiz: 
-    * I would like to find a way to implement our work to be accessible online.
+    * I would like to find a way to implement our work to stay accessible online.
 
